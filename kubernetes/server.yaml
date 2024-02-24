@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-fever
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server-fever
+  template:
+    metadata:
+      labels:
+        app: server-fever
+    spec:
+      containers:
+      - name: server-fever
+        image: adc-server2
+        ports:
+        - containerPort: 5000
