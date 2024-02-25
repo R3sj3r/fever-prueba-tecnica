@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: server-fever
   name: server-fever
 spec:
   replicas: 1
@@ -14,6 +16,6 @@ spec:
     spec:
       containers:
       - name: server-fever
-        image: adc-server2
+        image: r3sj3r/fever-prueba:s1
         ports:
         - containerPort: 5000

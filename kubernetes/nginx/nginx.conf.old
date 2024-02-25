@@ -1,0 +1,59 @@
+events {
+  worker_connections  1024;  ## Default: 1024
+}
+http {
+ ssl_session_cache   shared:SSL:10m;
+ ssl_session_timeout 10m;
+
+ server {
+    listen 8080 ssl;
+    server_name server;
+    keepalive_timeout   70;
+    ssl_certificate     certs/server.crt;
+    ssl_certificate_key certs/server.key;
+# the app is running on port 5000
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://web:5000;
+    }
+  }
+ server {
+    listen 8080 ssl;
+    server_name server.example.com;
+    keepalive_timeout   70;
+    ssl_certificate     certs/server.crt;
+    ssl_certificate_key certs/server.key;
+# the app is running on port 5000
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://web:5000;
+    }
+  }
+ server {
+    listen 8080 ssl;
+    server_name server.local;
+    keepalive_timeout   70;
+    ssl_certificate     certs/server.crt;
+    ssl_certificate_key certs/server.key;
+
+    # the app is running on port 5000
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://web:5000;
+    }
+  }
+  server {
+    listen 80 default_server;
+
+    server_name _;
+    
+    # redirect requests with https
+    return 301 https://$host$request_uri;
+  }
+}

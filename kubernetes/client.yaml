@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-fever
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-fever
+  template:
+    metadata:
+      labels:
+        app: client-fever
+    spec:
+      containers:
+      - name: client-fever
+        image: r3sj3r/fever-prueba:c1
+        command:
+          - sleep
+          - "3600"
