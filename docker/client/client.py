@@ -18,6 +18,7 @@ class Client:
     def run(self):
         for server_address in self.server_addresses:
             url = f'https://{server_address}:5000'
+            self.session.verify = 'certs/{server_address}.crt'
             self.request(url)
 
 if __name__ == '__main__':

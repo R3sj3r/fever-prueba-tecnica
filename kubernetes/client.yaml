@@ -12,9 +12,15 @@ spec:
       labels:
         app: client-fever
     spec:
+      hostAliases:
+      - ip: "10.96.90.34"
+        hostnames:
+        - "server"
+        - "server.example.com"
+        - "server.local"
       containers:
       - name: client-fever
-        image: r3sj3r/fever-prueba:c1
+        image: r3sj3r/fever-prueba:c3
         command:
           - sleep
           - "3600"
