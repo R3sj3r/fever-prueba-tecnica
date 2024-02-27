@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: server-fever
-        image: r3sj3r/fever-prueba:s1
+        image: r3sj3r/fever-prueba:s5
         ports:
         - containerPort: 5000
