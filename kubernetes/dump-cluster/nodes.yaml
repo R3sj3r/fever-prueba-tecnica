@@ -1,0 +1,302 @@
+apiVersion: v1
+items:
+- metadata:
+    annotations:
+      kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2024-02-25T15:50:56Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      ingress-ready: "true"
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: fever-cluster-control-plane
+      kubernetes.io/os: linux
+      node-role.kubernetes.io/control-plane: ""
+      node.kubernetes.io/exclude-from-external-load-balancers: ""
+    name: fever-cluster-control-plane
+    resourceVersion: "135987"
+    uid: 090d9437-66a0-4c3d-96d7-f936ce8c6ea3
+  spec:
+    podCIDR: 10.244.0.0/24
+    podCIDRs:
+    - 10.244.0.0/24
+    providerID: kind://docker/fever-cluster/fever-cluster-control-plane
+    taints:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/control-plane
+  status:
+    addresses:
+    - address: 172.18.0.3
+      type: InternalIP
+    - address: fever-cluster-control-plane
+      type: Hostname
+    allocatable:
+      cpu: "2"
+      ephemeral-storage: 65739308Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 985924Ki
+      pods: "110"
+    capacity:
+      cpu: "2"
+      ephemeral-storage: 65739308Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 985924Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2024-02-27T18:50:29Z"
+      lastTransitionTime: "2024-02-25T15:50:52Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2024-02-27T18:50:29Z"
+      lastTransitionTime: "2024-02-25T15:50:52Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2024-02-27T18:50:29Z"
+      lastTransitionTime: "2024-02-25T15:50:52Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2024-02-27T18:50:29Z"
+      lastTransitionTime: "2024-02-25T15:51:19Z"
+      message: kubelet is posting ready status
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - registry.k8s.io/ingress-nginx/controller@sha256:1405cc613bd95b2c6edd8b2a152510ae91c7e62aea4698500d23b2145960ab9c
+      sizeBytes: 105216466
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:9dc4f70aac00562ca2cf9e91f3738b24b9003a65632caa4594ead32a0c61acb5
+      - registry.k8s.io/kube-apiserver-amd64:v1.29.2
+      - registry.k8s.io/kube-apiserver:v1.29.2
+      sizeBytes: 86153187
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:b58ead7037c74ab4985dd33c9cd341089c509dc2aa233da4724ecdef9bddcfb9
+      - registry.k8s.io/kube-proxy-amd64:v1.29.2
+      - registry.k8s.io/kube-proxy:v1.29.2
+      sizeBytes: 83531977
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:de4f85102afe375b2b6b6a5decd3f3e8653639ebd3ed19003366a469cdec45a6
+      - registry.k8s.io/kube-controller-manager-amd64:v1.29.2
+      - registry.k8s.io/kube-controller-manager:v1.29.2
+      sizeBytes: 80282953
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:55f6e3c4013d0bf33a057922a72ab12120071da9fe3b356dabbfc2892a2b4325
+      - registry.k8s.io/kube-scheduler-amd64:v1.29.2
+      - registry.k8s.io/kube-scheduler:v1.29.2
+      sizeBytes: 60614985
+    - names:
+      - registry.k8s.io/etcd:3.5.10-0
+      sizeBytes: 56649232
+    - names:
+      - docker.io/kindest/kindnetd:v20240202-8f1494ea
+      sizeBytes: 27755257
+    - names:
+      - docker.io/kindest/local-path-provisioner:v20240202-8f1494ea
+      sizeBytes: 19365409
+    - names:
+      - registry.k8s.io/coredns/coredns:v1.11.1
+      sizeBytes: 18182961
+    - names:
+      - docker.io/kindest/local-path-helper:v20230510-486859a6
+      sizeBytes: 3052318
+    - names:
+      - registry.k8s.io/pause:3.7
+      sizeBytes: 311278
+    nodeInfo:
+      architecture: amd64
+      bootID: 0811ef35-1e82-4e79-9589-b1d2a01e06e4
+      containerRuntimeVersion: containerd://1.7.13
+      kernelVersion: 6.6.12-linuxkit
+      kubeProxyVersion: v1.29.2
+      kubeletVersion: v1.29.2
+      machineID: 63807ca8dfbb4d2a9142dcdc0c93e7bc
+      operatingSystem: linux
+      osImage: Debian GNU/Linux 12 (bookworm)
+      systemUUID: 63807ca8dfbb4d2a9142dcdc0c93e7bc
+- metadata:
+    annotations:
+      kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2024-02-25T15:51:22Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: fever-cluster-worker
+      kubernetes.io/os: linux
+    name: fever-cluster-worker
+    resourceVersion: "136186"
+    uid: b872af6b-042f-40dc-a999-b7a832a25517
+  spec:
+    podCIDR: 10.244.1.0/24
+    podCIDRs:
+    - 10.244.1.0/24
+    providerID: kind://docker/fever-cluster/fever-cluster-worker
+  status:
+    addresses:
+    - address: 172.18.0.2
+      type: InternalIP
+    - address: fever-cluster-worker
+      type: Hostname
+    allocatable:
+      cpu: "2"
+      ephemeral-storage: 65739308Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 985924Ki
+      pods: "110"
+    capacity:
+      cpu: "2"
+      ephemeral-storage: 65739308Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 985924Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2024-02-27T18:52:44Z"
+      lastTransitionTime: "2024-02-25T15:51:22Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2024-02-27T18:52:44Z"
+      lastTransitionTime: "2024-02-25T15:51:22Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2024-02-27T18:52:44Z"
+      lastTransitionTime: "2024-02-25T15:51:22Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2024-02-27T18:52:44Z"
+      lastTransitionTime: "2024-02-25T15:51:30Z"
+      message: kubelet is posting ready status
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:3eb6eea48d6e31702cb3cff3296b8f38f787100c89cf5d7fb2284cc3d0f3ced9
+      - docker.io/r3sj3r/fever-prueba:s1
+      sizeBytes: 401996757
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:3bf6ab9932845e1ef413884d4bbacb5710ea5526e3fc512fc8d89ff6e7ceee34
+      - docker.io/r3sj3r/fever-prueba:s3
+      sizeBytes: 401996192
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:013b0eab1170d6025af94141331ce19a9c45455a020f2b05815f15663ac6d2d5
+      - docker.io/r3sj3r/fever-prueba:s5
+      sizeBytes: 401995961
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:549624b98685713e48b80247687d2cbf67bd79788a2a26212656272a6e353189
+      - docker.io/r3sj3r/fever-prueba:s4
+      sizeBytes: 401995915
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:4c54ea445b982690d36bae8c6abff38e138ef63e3c77a1ea3ab1a2e8fe734520
+      - docker.io/r3sj3r/fever-prueba:s2
+      sizeBytes: 401991905
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:e71005bdcfef68985ced87598ae4f3e79e0f73a8a09102005ff334cf0c4219a3
+      - docker.io/r3sj3r/fever-prueba:c3
+      sizeBytes: 386375750
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:ac7b8c428917cc1a8f10abe0b6b5c85d8825c1db7ef40ba45a86b3c21648386e
+      - docker.io/r3sj3r/fever-prueba:c2
+      sizeBytes: 386369401
+    - names:
+      - docker.io/r3sj3r/fever-prueba@sha256:2112871bfbb9a58de7c86b3508bd222b09b48f042bcbc08b44e7a696dde7e567
+      - docker.io/r3sj3r/fever-prueba:c1
+      sizeBytes: 386244702
+    - names:
+      - registry.k8s.io/ingress-nginx/controller@sha256:e5c4824e7375fcf2a393e1c03c293b69759af37a9ca6abdb91b13d78a93da8bd
+      sizeBytes: 113903192
+    - names:
+      - k8s.gcr.io/ingress-nginx/controller@sha256:3dd0fac48073beaca2d67a78c746c7593f9c575168a17139a9955a82c63c4b9a
+      sizeBytes: 101963050
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:9dc4f70aac00562ca2cf9e91f3738b24b9003a65632caa4594ead32a0c61acb5
+      - registry.k8s.io/kube-apiserver-amd64:v1.29.2
+      - registry.k8s.io/kube-apiserver:v1.29.2
+      sizeBytes: 86153187
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:b58ead7037c74ab4985dd33c9cd341089c509dc2aa233da4724ecdef9bddcfb9
+      - registry.k8s.io/kube-proxy-amd64:v1.29.2
+      - registry.k8s.io/kube-proxy:v1.29.2
+      sizeBytes: 83531977
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:de4f85102afe375b2b6b6a5decd3f3e8653639ebd3ed19003366a469cdec45a6
+      - registry.k8s.io/kube-controller-manager-amd64:v1.29.2
+      - registry.k8s.io/kube-controller-manager:v1.29.2
+      sizeBytes: 80282953
+    - names:
+      - docker.io/library/import-2024-02-14@sha256:55f6e3c4013d0bf33a057922a72ab12120071da9fe3b356dabbfc2892a2b4325
+      - registry.k8s.io/kube-scheduler-amd64:v1.29.2
+      - registry.k8s.io/kube-scheduler:v1.29.2
+      sizeBytes: 60614985
+    - names:
+      - registry.k8s.io/etcd:3.5.10-0
+      sizeBytes: 56649232
+    - names:
+      - registry.k8s.io/e2e-test-images/agnhost@sha256:7e8bdd271312fd25fc5ff5a8f04727be84044eb3d7d8d03611972a6752e2e11e
+      - registry.k8s.io/e2e-test-images/agnhost:2.39
+      sizeBytes: 51105200
+    - names:
+      - docker.io/kindest/kindnetd:v20240202-8f1494ea
+      sizeBytes: 27755257
+    - names:
+      - registry.k8s.io/ingress-nginx/kube-webhook-certgen@sha256:25d6a5f11211cc5c3f9f2bf552b585374af287b4debf693cacbe2da47daa5084
+      sizeBytes: 23146144
+    - names:
+      - registry.k8s.io/ingress-nginx/kube-webhook-certgen@sha256:543c40fd093964bc9ab509d3e791f9989963021f1e9e4c9c7b6700b02bfb227b
+      sizeBytes: 20266348
+    - names:
+      - docker.io/kindest/local-path-provisioner:v20240202-8f1494ea
+      sizeBytes: 19365409
+    - names:
+      - registry.k8s.io/coredns/coredns:v1.11.1
+      sizeBytes: 18182961
+    - names:
+      - docker.io/kindest/local-path-helper:v20230510-486859a6
+      sizeBytes: 3052318
+    - names:
+      - docker.io/library/busybox@sha256:6d9ac9237a84afe1516540f40a0fafdc86859b2141954b4d643af7066d598b74
+      - docker.io/library/busybox:latest
+      sizeBytes: 2231050
+    - names:
+      - registry.k8s.io/pause:3.7
+      sizeBytes: 311278
+    nodeInfo:
+      architecture: amd64
+      bootID: 0811ef35-1e82-4e79-9589-b1d2a01e06e4
+      containerRuntimeVersion: containerd://1.7.13
+      kernelVersion: 6.6.12-linuxkit
+      kubeProxyVersion: v1.29.2
+      kubeletVersion: v1.29.2
+      machineID: 69106c47048c4d58b4606520d660da21
+      operatingSystem: linux
+      osImage: Debian GNU/Linux 12 (bookworm)
+      systemUUID: 69106c47048c4d58b4606520d660da21
+kind: NodeList
+metadata:
+  resourceVersion: "136341"

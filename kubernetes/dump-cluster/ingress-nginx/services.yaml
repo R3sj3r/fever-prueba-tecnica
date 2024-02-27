@@ -1,0 +1,82 @@
+---
+apiVersion: v1
+items:
+- metadata:
+    creationTimestamp: "2024-02-27T18:04:55Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.9.6
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "131707"
+    uid: 37adc5ef-9e5b-4622-a5b5-0ac90a9377f6
+  spec:
+    clusterIP: 10.96.248.89
+    clusterIPs:
+    - 10.96.248.89
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - appProtocol: http
+      name: http
+      nodePort: 31892
+      port: 80
+      protocol: TCP
+      targetPort: http
+    - appProtocol: https
+      name: https
+      nodePort: 30975
+      port: 443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- metadata:
+    creationTimestamp: "2024-02-27T18:04:55Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.9.6
+    name: ingress-nginx-controller-admission
+    namespace: ingress-nginx
+    resourceVersion: "131711"
+    uid: 1d5eec4c-d2d2-4dba-8545-78f1086d3003
+  spec:
+    clusterIP: 10.96.69.51
+    clusterIPs:
+    - 10.96.69.51
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - appProtocol: https
+      name: https-webhook
+      port: 443
+      protocol: TCP
+      targetPort: webhook
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "136341"

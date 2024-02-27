@@ -1,0 +1,775 @@
+---
+apiVersion: v1
+items:
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:33Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "130775"
+    uid: 2362e64d-8408-419c-8bf0-e2dff44b4b1c
+  lastTimestamp: "2024-02-27T17:55:33Z"
+  message: Successfully assigned default/bar-app to fever-cluster-worker
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:33Z"
+    name: bar-app.17b7c9dcb7ebfcbc
+    namespace: default
+    resourceVersion: "130784"
+    uid: 79cd4100-0984-4946-ac4a-a2f2f381659f
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "130781"
+    uid: 2362e64d-8408-419c-8bf0-e2dff44b4b1c
+  lastTimestamp: "2024-02-27T17:55:35Z"
+  message: Pulling image "registry.k8s.io/e2e-test-images/agnhost:2.39"
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:35Z"
+    name: bar-app.17b7c9dd2e0c0827
+    namespace: default
+    resourceVersion: "130789"
+    uid: f8ba4f62-dafb-4ab3-a731-0e1707a09aa6
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "130781"
+    uid: 2362e64d-8408-419c-8bf0-e2dff44b4b1c
+  lastTimestamp: "2024-02-27T17:55:51Z"
+  message: Successfully pulled image "registry.k8s.io/e2e-test-images/agnhost:2.39"
+    in 15.985s (15.986s including waiting)
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:51Z"
+    name: bar-app.17b7c9e0e72aed89
+    namespace: default
+    resourceVersion: "130812"
+    uid: 7b6163aa-cdad-4e99-be10-faa8037c7b8f
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "130781"
+    uid: 2362e64d-8408-419c-8bf0-e2dff44b4b1c
+  lastTimestamp: "2024-02-27T17:55:51Z"
+  message: Created container bar-app
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:51Z"
+    name: bar-app.17b7c9e0f87fd368
+    namespace: default
+    resourceVersion: "130813"
+    uid: a863bd6c-674f-4d7b-a9cd-2b4b46ef559a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "130781"
+    uid: 2362e64d-8408-419c-8bf0-e2dff44b4b1c
+  lastTimestamp: "2024-02-27T17:55:52Z"
+  message: Started container bar-app
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:52Z"
+    name: bar-app.17b7c9e11676bb3f
+    namespace: default
+    resourceVersion: "130816"
+    uid: c7183747-dd73-41fb-a17a-9f47e8b654a1
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:58:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "130781"
+    uid: 2362e64d-8408-419c-8bf0-e2dff44b4b1c
+  lastTimestamp: "2024-02-27T17:58:29Z"
+  message: Stopping container bar-app
+  metadata:
+    creationTimestamp: "2024-02-27T17:58:29Z"
+    name: bar-app.17b7ca05c2127cf0
+    namespace: default
+    resourceVersion: "131053"
+    uid: 169ef103-4932-441c-8ad8-a8179012e34b
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:53Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "131975"
+    uid: 4b5d955d-e8fc-48bb-a611-b238ee8225cf
+  lastTimestamp: "2024-02-27T18:06:53Z"
+  message: Successfully assigned default/bar-app to fever-cluster-worker
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:53Z"
+    name: bar-app.17b7ca7b0284c2d2
+    namespace: default
+    resourceVersion: "131977"
+    uid: 29eef669-4ebc-4263-a2d8-c94cfdfda58e
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "131976"
+    uid: 4b5d955d-e8fc-48bb-a611-b238ee8225cf
+  lastTimestamp: "2024-02-27T18:06:55Z"
+  message: Container image "registry.k8s.io/e2e-test-images/agnhost:2.39" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:55Z"
+    name: bar-app.17b7ca7b957aeb62
+    namespace: default
+    resourceVersion: "131991"
+    uid: e82f4df0-8005-4786-a9e3-c26dc54d65cf
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "131976"
+    uid: 4b5d955d-e8fc-48bb-a611-b238ee8225cf
+  lastTimestamp: "2024-02-27T18:06:55Z"
+  message: Created container bar-app
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:56Z"
+    name: bar-app.17b7ca7ba28f8075
+    namespace: default
+    resourceVersion: "131996"
+    uid: 10fa4202-f886-4d1e-85ac-0df58f74e65d
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "131976"
+    uid: 4b5d955d-e8fc-48bb-a611-b238ee8225cf
+  lastTimestamp: "2024-02-27T18:06:56Z"
+  message: Started container bar-app
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:57Z"
+    name: bar-app.17b7ca7bcce08e35
+    namespace: default
+    resourceVersion: "131998"
+    uid: ea3fc09f-6833-46c1-89b9-b178d2741b70
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:09:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{bar-app}
+    kind: Pod
+    name: bar-app
+    namespace: default
+    resourceVersion: "131976"
+    uid: 4b5d955d-e8fc-48bb-a611-b238ee8225cf
+  lastTimestamp: "2024-02-27T18:09:01Z"
+  message: Stopping container bar-app
+  metadata:
+    creationTimestamp: "2024-02-27T18:09:01Z"
+    name: bar-app.17b7ca98bf53dc93
+    namespace: default
+    resourceVersion: "132206"
+    uid: 9366f2c9-1624-4edf-8862-e23f44d3bb59
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 7
+  eventTime: null
+  firstTimestamp: "2024-02-27T12:32:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{client-fever}
+    kind: Pod
+    name: client-fever-689c656477-xf66r
+    namespace: default
+    resourceVersion: "102442"
+    uid: 84de6580-eec9-4757-b069-75a1ece343af
+  lastTimestamp: "2024-02-27T18:32:58Z"
+  message: Created container client-fever
+  metadata:
+    creationTimestamp: "2024-02-27T12:32:46Z"
+    name: client-fever-689c656477-xf66r.17b7b83f87f71285
+    namespace: default
+    resourceVersion: "134414"
+    uid: da9016c3-85df-4f8b-80b8-4aa35bd839e4
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 7
+  eventTime: null
+  firstTimestamp: "2024-02-27T12:32:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{client-fever}
+    kind: Pod
+    name: client-fever-689c656477-xf66r
+    namespace: default
+    resourceVersion: "102442"
+    uid: 84de6580-eec9-4757-b069-75a1ece343af
+  lastTimestamp: "2024-02-27T18:32:58Z"
+  message: Started container client-fever
+  metadata:
+    creationTimestamp: "2024-02-27T12:32:47Z"
+    name: client-fever-689c656477-xf66r.17b7b83f9fb8402c
+    namespace: default
+    resourceVersion: "134415"
+    uid: 422c1d32-f615-4892-b0b4-140bf27e4b23
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 6
+  eventTime: null
+  firstTimestamp: "2024-02-27T13:32:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{client-fever}
+    kind: Pod
+    name: client-fever-689c656477-xf66r
+    namespace: default
+    resourceVersion: "102442"
+    uid: 84de6580-eec9-4757-b069-75a1ece343af
+  lastTimestamp: "2024-02-27T18:32:57Z"
+  message: Container image "r3sj3r/fever-prueba:c3" already present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T13:32:47Z"
+    name: client-fever-689c656477-xf66r.17b7bb85fb449c3a
+    namespace: default
+    resourceVersion: "134409"
+    uid: 8ba61bf1-5973-40ab-8a24-bfd1dd8367e2
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:54Z"
+  involvedObject:
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: example-ingress
+    namespace: default
+    resourceVersion: "131985"
+    uid: 72a1df5f-bad7-4bb8-aaea-12f7b163b7da
+  lastTimestamp: "2024-02-27T18:07:07Z"
+  message: Scheduled for sync
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:54Z"
+    name: example-ingress.17b7ca7b3b55f2e2
+    namespace: default
+    resourceVersion: "132022"
+    uid: 6e1c9216-fa95-44ec-b1db-29731f592ff6
+  reason: Sync
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:33Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "130768"
+    uid: dc8f4ac3-c04c-452b-adac-105d4f675f58
+  lastTimestamp: "2024-02-27T17:55:33Z"
+  message: Successfully assigned default/foo-app to fever-cluster-worker
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:33Z"
+    name: foo-app.17b7c9dcb69e7ed4
+    namespace: default
+    resourceVersion: "130782"
+    uid: 61904619-1e77-46ec-bf7e-3696aaa48351
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "130771"
+    uid: dc8f4ac3-c04c-452b-adac-105d4f675f58
+  lastTimestamp: "2024-02-27T17:55:35Z"
+  message: Pulling image "registry.k8s.io/e2e-test-images/agnhost:2.39"
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:35Z"
+    name: foo-app.17b7c9dd2fe67f2a
+    namespace: default
+    resourceVersion: "130790"
+    uid: 136662f7-8dbf-46e8-b569-fba4f13deb95
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "130771"
+    uid: dc8f4ac3-c04c-452b-adac-105d4f675f58
+  lastTimestamp: "2024-02-27T17:55:52Z"
+  message: Successfully pulled image "registry.k8s.io/e2e-test-images/agnhost:2.39"
+    in 1.42s (17.376s including waiting)
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:52Z"
+    name: foo-app.17b7c9e13ba7596a
+    namespace: default
+    resourceVersion: "130818"
+    uid: 57410f26-d209-4d8d-a2e0-c7802afb14c0
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:53Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "130771"
+    uid: dc8f4ac3-c04c-452b-adac-105d4f675f58
+  lastTimestamp: "2024-02-27T17:55:53Z"
+  message: Created container foo-app
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:53Z"
+    name: foo-app.17b7c9e15a43cf28
+    namespace: default
+    resourceVersion: "130821"
+    uid: 0c764e2c-df06-4831-b20d-853c652c37a2
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:55:54Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "130771"
+    uid: dc8f4ac3-c04c-452b-adac-105d4f675f58
+  lastTimestamp: "2024-02-27T17:55:54Z"
+  message: Started container foo-app
+  metadata:
+    creationTimestamp: "2024-02-27T17:55:54Z"
+    name: foo-app.17b7c9e19c347c1e
+    namespace: default
+    resourceVersion: "130825"
+    uid: ade8e786-9aae-43c1-b9ba-603e5d8764e3
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:58:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "130771"
+    uid: dc8f4ac3-c04c-452b-adac-105d4f675f58
+  lastTimestamp: "2024-02-27T17:58:29Z"
+  message: Stopping container foo-app
+  metadata:
+    creationTimestamp: "2024-02-27T17:58:29Z"
+    name: foo-app.17b7ca05993e5fdd
+    namespace: default
+    resourceVersion: "131045"
+    uid: 132d692a-a2d2-4f4f-979e-f7325caeb4d8
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:52Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "131966"
+    uid: fd174095-7971-4119-88b6-f81a11956842
+  lastTimestamp: "2024-02-27T18:06:52Z"
+  message: Successfully assigned default/foo-app to fever-cluster-worker
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:52Z"
+    name: foo-app.17b7ca7ae48477ba
+    namespace: default
+    resourceVersion: "131973"
+    uid: fff715d2-f200-4f6d-8e38-0556a883a5c2
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "131969"
+    uid: fd174095-7971-4119-88b6-f81a11956842
+  lastTimestamp: "2024-02-27T18:06:55Z"
+  message: Container image "registry.k8s.io/e2e-test-images/agnhost:2.39" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:55Z"
+    name: foo-app.17b7ca7b95e72d72
+    namespace: default
+    resourceVersion: "131992"
+    uid: 8a7592db-cf39-45ea-b584-7108ace2808d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "131969"
+    uid: fd174095-7971-4119-88b6-f81a11956842
+  lastTimestamp: "2024-02-27T18:06:55Z"
+  message: Created container foo-app
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:56Z"
+    name: foo-app.17b7ca7ba284f94b
+    namespace: default
+    resourceVersion: "131995"
+    uid: ba283ecd-f464-468a-ab6a-ba8c8d5ce7bf
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:06:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "131969"
+    uid: fd174095-7971-4119-88b6-f81a11956842
+  lastTimestamp: "2024-02-27T18:06:56Z"
+  message: Started container foo-app
+  metadata:
+    creationTimestamp: "2024-02-27T18:06:56Z"
+    name: foo-app.17b7ca7bc3a93080
+    namespace: default
+    resourceVersion: "131997"
+    uid: dd86105f-e089-4e7b-a42a-d8d54b0da4b0
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:09:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{foo-app}
+    kind: Pod
+    name: foo-app
+    namespace: default
+    resourceVersion: "131969"
+    uid: fd174095-7971-4119-88b6-f81a11956842
+  lastTimestamp: "2024-02-27T18:09:00Z"
+  message: Stopping container foo-app
+  metadata:
+    creationTimestamp: "2024-02-27T18:09:00Z"
+    name: foo-app.17b7ca98a9ddb463
+    namespace: default
+    resourceVersion: "132200"
+    uid: cca0a4f7-ac3d-45b4-9ca9-7c2ef53a4c6f
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T17:58:29Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: foo-service
+    namespace: default
+    resourceVersion: "130827"
+    uid: 44f78822-f93d-46a7-8735-58719ec47739
+  lastTimestamp: "2024-02-27T17:58:29Z"
+  message: 'Failed to update endpoint default/foo-service: Operation cannot be fulfilled
+    on endpoints "foo-service": StorageError: invalid object, Code: 4, Key: /registry/services/endpoints/default/foo-service,
+    ResourceVersion: 0, AdditionalErrorMsg: Precondition failed: UID in precondition:
+    44f78822-f93d-46a7-8735-58719ec47739, UID in object meta: '
+  metadata:
+    creationTimestamp: "2024-02-27T17:58:29Z"
+    name: foo-service.17b7ca05aca6be42
+    namespace: default
+    resourceVersion: "131047"
+    uid: 23ae907e-56fd-480d-9b8b-38644922f3be
+  reason: FailedToUpdateEndpoint
+  reportingComponent: endpoint-controller
+  reportingInstance: ""
+  source:
+    component: endpoint-controller
+  type: Warning
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:17Z"
+  involvedObject:
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: nginx-ingress
+    namespace: default
+    resourceVersion: "128218"
+    uid: 3aa95cac-6855-4959-bfc3-b0fb233d14bc
+  lastTimestamp: "2024-02-27T18:04:17Z"
+  message: Scheduled for sync
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:17Z"
+    name: nginx-ingress.17b7ca56a63224fe
+    namespace: default
+    resourceVersion: "131563"
+    uid: 3d585417-7e33-41b6-9162-d6f7083b4163
+  reason: Sync
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+- count: 3
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:07Z"
+  involvedObject:
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: nginx-ingress
+    namespace: default
+    resourceVersion: "131562"
+    uid: 3aa95cac-6855-4959-bfc3-b0fb233d14bc
+  lastTimestamp: "2024-02-27T18:19:24Z"
+  message: Scheduled for sync
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:07Z"
+    name: nginx-ingress.17b7ca6258ac06a7
+    namespace: default
+    resourceVersion: "133152"
+    uid: a1f5159e-7269-4586-8981-6bf8321464ee
+  reason: Sync
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:32:01Z"
+  involvedObject:
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: nginx-ingress
+    namespace: default
+    resourceVersion: "133151"
+    uid: 3aa95cac-6855-4959-bfc3-b0fb233d14bc
+  lastTimestamp: "2024-02-27T18:32:01Z"
+  message: Scheduled for sync
+  metadata:
+    creationTimestamp: "2024-02-27T18:32:01Z"
+    name: nginx-ingress.17b7cbda25669578
+    namespace: default
+    resourceVersion: "134320"
+    uid: e910304b-6e99-45f2-833d-e2dbf9c94f87
+  reason: Sync
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "136341"

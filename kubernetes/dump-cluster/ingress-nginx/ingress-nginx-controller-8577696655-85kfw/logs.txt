@@ -1,0 +1,47 @@
+==== START logs for container controller of pod ingress-nginx/ingress-nginx-controller-8577696655-85kfw ====
+-------------------------------------------------------------------------------
+NGINX Ingress controller
+  Release:       v1.9.6
+  Build:         6a73aa3b05040a97ef8213675a16142a9c95952a
+  Repository:    https://github.com/kubernetes/ingress-nginx
+  nginx version: nginx/1.21.6
+
+-------------------------------------------------------------------------------
+
+W0227 18:31:59.925652      10 client_config.go:618] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+I0227 18:31:59.926793      10 main.go:205] "Creating API client" host="https://10.96.0.1:443"
+I0227 18:32:00.055090      10 main.go:249] "Running in Kubernetes cluster" major="1" minor="29" git="v1.29.2" state="clean" commit="4b8e819355d791d96b7e9d9efe4cbafae2311c88" platform="linux/amd64"
+I0227 18:32:00.154770      10 main.go:101] "SSL fake certificate created" file="/etc/ingress-controller/ssl/default-fake-certificate.pem"
+I0227 18:32:00.255882      10 ssl.go:536] "loading tls certificate" path="/usr/local/certificates/cert" key="/usr/local/certificates/key"
+I0227 18:32:00.288867      10 nginx.go:260] "Starting NGINX Ingress controller"
+I0227 18:32:00.324222      10 event.go:298] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"ingress-nginx", Name:"ingress-nginx-controller", UID:"4aa6f7b8-ca76-4154-b618-ef66f66f77f8", APIVersion:"v1", ResourceVersion:"131703", FieldPath:""}): type: 'Normal' reason: 'CREATE' ConfigMap ingress-nginx/ingress-nginx-controller
+I0227 18:32:01.401148      10 store.go:440] "Found valid IngressClass" ingress="default/nginx-ingress" ingressclass="nginx"
+I0227 18:32:01.403465      10 event.go:298] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"default", Name:"nginx-ingress", UID:"3aa95cac-6855-4959-bfc3-b0fb233d14bc", APIVersion:"networking.k8s.io/v1", ResourceVersion:"133151", FieldPath:""}): type: 'Normal' reason: 'Sync' Scheduled for sync
+I0227 18:32:01.495231      10 nginx.go:769] "Starting TLS proxy for SSL Passthrough"
+I0227 18:32:01.495447      10 nginx.go:303] "Starting NGINX process"
+I0227 18:32:01.496098      10 leaderelection.go:245] attempting to acquire leader lease ingress-nginx/ingress-nginx-leader...
+I0227 18:32:01.502050      10 nginx.go:323] "Starting validation webhook" address=":8443" certPath="/usr/local/certificates/cert" keyPath="/usr/local/certificates/key"
+I0227 18:32:01.502378      10 status.go:84] "New leader elected" identity="ingress-nginx-controller-6f5b7cc8d4-x5lx8"
+I0227 18:32:01.505002      10 controller.go:190] "Configuration changes detected, backend reload required"
+I0227 18:32:01.805980      10 controller.go:210] "Backend successfully reloaded"
+I0227 18:32:01.815878      10 controller.go:221] "Initial sync, sleeping for 1 second"
+I0227 18:32:01.816930      10 event.go:298] Event(v1.ObjectReference{Kind:"Pod", Namespace:"ingress-nginx", Name:"ingress-nginx-controller-8577696655-85kfw", UID:"0b187bb6-4c14-4d01-8803-241e618c1481", APIVersion:"v1", ResourceVersion:"134312", FieldPath:""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration
+I0227 18:32:40.771188      10 leaderelection.go:255] successfully acquired lease ingress-nginx/ingress-nginx-leader
+I0227 18:32:40.775101      10 status.go:84] "New leader elected" identity="ingress-nginx-controller-8577696655-85kfw"
+2024/02/27 18:34:17 [error] 29#29: *1113 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:34:17 [error] 29#29: *1113 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:34:17 [error] 29#29: *1113 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+127.0.0.1 - - [27/Feb/2024:18:34:17 +0000] "GET / HTTP/2.0" 502 150 "-" "curl/7.88.1" 47 0.059 [default-server-5000] [] 10.244.1.31:5000, 10.244.1.31:5000, 10.244.1.31:5000 0, 0, 0 0.057, 0.001, 0.001 502, 502, 502 e1f6611653c59d0d69f8ca81635c4587
+2024/02/27 18:35:57 [error] 29#29: *1948 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:35:57 [error] 29#29: *1948 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:35:57 [error] 29#29: *1948 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+127.0.0.1 - - [27/Feb/2024:18:35:57 +0000] "GET / HTTP/2.0" 502 150 "-" "curl/7.88.1" 47 0.019 [default-server-5000] [] 10.244.1.31:5000, 10.244.1.31:5000, 10.244.1.31:5000 0, 0, 0 0.016, 0.002, 0.000 502, 502, 502 2686deaadd669c678a3e9ee0a5eba301
+2024/02/27 18:36:12 [error] 29#29: *2077 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 10.244.1.17, server: _, request: "GET / HTTP/1.1", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:36:12 [error] 29#29: *2077 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 10.244.1.17, server: _, request: "GET / HTTP/1.1", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:36:12 [error] 29#29: *2077 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 10.244.1.17, server: _, request: "GET / HTTP/1.1", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+10.244.1.17 - - [27/Feb/2024:18:36:12 +0000] "GET / HTTP/1.1" 502 150 "-" "curl/7.88.1" 102 0.016 [default-server-5000] [] 10.244.1.31:5000, 10.244.1.31:5000, 10.244.1.31:5000 0, 0, 0 0.012, 0.003, 0.001 502, 502, 502 f1ffbd1047f4893ed9edd34219212911
+2024/02/27 18:37:04 [error] 29#29: *2500 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:37:04 [error] 29#29: *2500 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+2024/02/27 18:37:04 [error] 29#29: *2500 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/2.0", upstream: "http://10.244.1.31:5000/", host: "ingress-nginx-controller.ingress-nginx"
+127.0.0.1 - - [27/Feb/2024:18:37:04 +0000] "GET / HTTP/2.0" 502 150 "-" "curl/7.88.1" 47 0.047 [default-server-5000] [] 10.244.1.31:5000, 10.244.1.31:5000, 10.244.1.31:5000 0, 0, 0 0.037, 0.009, 0.002 502, 502, 502 90ba22303202156d48a4af47d9ade1bc
+==== END logs for container controller of pod ingress-nginx/ingress-nginx-controller-8577696655-85kfw ====

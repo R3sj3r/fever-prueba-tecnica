@@ -1,0 +1,836 @@
+---
+apiVersion: v1
+items:
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-admission-create-9wvsf
+    namespace: ingress-nginx
+    resourceVersion: "131721"
+    uid: 26627f40-a16a-45c9-b7ff-952b897466b9
+  lastTimestamp: "2024-02-27T18:04:56Z"
+  message: Successfully assigned ingress-nginx/ingress-nginx-admission-create-9wvsf
+    to fever-cluster-worker
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:56Z"
+    name: ingress-nginx-admission-create-9wvsf.17b7ca5fb852ab1d
+    namespace: ingress-nginx
+    resourceVersion: "131738"
+    uid: 1bf01002-fd06-4997-b599-2c2bca88888b
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{create}
+    kind: Pod
+    name: ingress-nginx-admission-create-9wvsf
+    namespace: ingress-nginx
+    resourceVersion: "131733"
+    uid: 26627f40-a16a-45c9-b7ff-952b897466b9
+  lastTimestamp: "2024-02-27T18:04:57Z"
+  message: Container image "registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231226-1a7112e06@sha256:25d6a5f11211cc5c3f9f2bf552b585374af287b4debf693cacbe2da47daa5084"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:57Z"
+    name: ingress-nginx-admission-create-9wvsf.17b7ca602446ce49
+    namespace: ingress-nginx
+    resourceVersion: "131748"
+    uid: 7ca4cd31-b785-4aed-9a6b-56e042f1d9ac
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{create}
+    kind: Pod
+    name: ingress-nginx-admission-create-9wvsf
+    namespace: ingress-nginx
+    resourceVersion: "131733"
+    uid: 26627f40-a16a-45c9-b7ff-952b897466b9
+  lastTimestamp: "2024-02-27T18:04:58Z"
+  message: Created container create
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:58Z"
+    name: ingress-nginx-admission-create-9wvsf.17b7ca6036aa061f
+    namespace: ingress-nginx
+    resourceVersion: "131751"
+    uid: 1a50a870-cc61-4d12-b95c-30d5a53ef7f6
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{create}
+    kind: Pod
+    name: ingress-nginx-admission-create-9wvsf
+    namespace: ingress-nginx
+    resourceVersion: "131733"
+    uid: 26627f40-a16a-45c9-b7ff-952b897466b9
+  lastTimestamp: "2024-02-27T18:04:58Z"
+  message: Started container create
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:58Z"
+    name: ingress-nginx-admission-create-9wvsf.17b7ca604da7cd65
+    namespace: ingress-nginx
+    resourceVersion: "131753"
+    uid: c4ac8148-cf8d-4854-be17-a9c417e752db
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:55Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: ingress-nginx-admission-create
+    namespace: ingress-nginx
+    resourceVersion: "131717"
+    uid: 0ec30302-0b75-425d-853e-bba86b50aa92
+  lastTimestamp: "2024-02-27T18:04:55Z"
+  message: 'Created pod: ingress-nginx-admission-create-9wvsf'
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:55Z"
+    name: ingress-nginx-admission-create.17b7ca5fad6c7b8d
+    namespace: ingress-nginx
+    resourceVersion: "131727"
+    uid: 75a72d81-111f-4c89-8a64-a99d6655ccd1
+  reason: SuccessfulCreate
+  reportingComponent: job-controller
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: ingress-nginx-admission-create
+    namespace: ingress-nginx
+    resourceVersion: "131783"
+    uid: 0ec30302-0b75-425d-853e-bba86b50aa92
+  lastTimestamp: "2024-02-27T18:05:05Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:05Z"
+    name: ingress-nginx-admission-create.17b7ca61f3ce6b73
+    namespace: ingress-nginx
+    resourceVersion: "131787"
+    uid: 411dcb90-8fae-4bc4-9566-c261f9a088f6
+  reason: Completed
+  reportingComponent: job-controller
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-admission-patch-m5svm
+    namespace: ingress-nginx
+    resourceVersion: "131723"
+    uid: c7ea07b3-0ba9-441b-b622-930979d6bde9
+  lastTimestamp: "2024-02-27T18:04:56Z"
+  message: Successfully assigned ingress-nginx/ingress-nginx-admission-patch-m5svm
+    to fever-cluster-worker
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:56Z"
+    name: ingress-nginx-admission-patch-m5svm.17b7ca5fb9982bd1
+    namespace: ingress-nginx
+    resourceVersion: "131740"
+    uid: a6b9b8e4-0100-489b-bb60-136093d1f884
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{patch}
+    kind: Pod
+    name: ingress-nginx-admission-patch-m5svm
+    namespace: ingress-nginx
+    resourceVersion: "131736"
+    uid: c7ea07b3-0ba9-441b-b622-930979d6bde9
+  lastTimestamp: "2024-02-27T18:04:59Z"
+  message: Container image "registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231226-1a7112e06@sha256:25d6a5f11211cc5c3f9f2bf552b585374af287b4debf693cacbe2da47daa5084"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:57Z"
+    name: ingress-nginx-admission-patch-m5svm.17b7ca60276067ba
+    namespace: ingress-nginx
+    resourceVersion: "131758"
+    uid: d9f19260-d55d-4208-ac9d-0d793a49b33f
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{patch}
+    kind: Pod
+    name: ingress-nginx-admission-patch-m5svm
+    namespace: ingress-nginx
+    resourceVersion: "131736"
+    uid: c7ea07b3-0ba9-441b-b622-930979d6bde9
+  lastTimestamp: "2024-02-27T18:05:00Z"
+  message: Created container patch
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:58Z"
+    name: ingress-nginx-admission-patch-m5svm.17b7ca603669f629
+    namespace: ingress-nginx
+    resourceVersion: "131761"
+    uid: 09002645-ad20-48fc-8499-cf6d57259849
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{patch}
+    kind: Pod
+    name: ingress-nginx-admission-patch-m5svm
+    namespace: ingress-nginx
+    resourceVersion: "131736"
+    uid: c7ea07b3-0ba9-441b-b622-930979d6bde9
+  lastTimestamp: "2024-02-27T18:05:02Z"
+  message: Started container patch
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:58Z"
+    name: ingress-nginx-admission-patch-m5svm.17b7ca6050d5fd2c
+    namespace: ingress-nginx
+    resourceVersion: "131766"
+    uid: f5a694eb-f813-425c-85a0-a6890a127dd8
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-worker
+  source:
+    component: kubelet
+    host: fever-cluster-worker
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:55Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: ingress-nginx-admission-patch
+    namespace: ingress-nginx
+    resourceVersion: "131718"
+    uid: e3d9400f-d92e-45cd-913c-0d7d458361ec
+  lastTimestamp: "2024-02-27T18:04:55Z"
+  message: 'Created pod: ingress-nginx-admission-patch-m5svm'
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:56Z"
+    name: ingress-nginx-admission-patch.17b7ca5fade8fe2a
+    namespace: ingress-nginx
+    resourceVersion: "131734"
+    uid: 8330b56c-23a8-44ad-9148-d51e0425c959
+  reason: SuccessfulCreate
+  reportingComponent: job-controller
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: ingress-nginx-admission-patch
+    namespace: ingress-nginx
+    resourceVersion: "131788"
+    uid: e3d9400f-d92e-45cd-913c-0d7d458361ec
+  lastTimestamp: "2024-02-27T18:05:06Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:06Z"
+    name: ingress-nginx-admission-patch.17b7ca620b15b3f3
+    namespace: ingress-nginx
+    resourceVersion: "131796"
+    uid: 39bc369e-cc5b-4052-8caf-95149b34fefd
+  reason: Completed
+  reportingComponent: job-controller
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131722"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:04:56Z"
+  message: Successfully assigned ingress-nginx/ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    to fever-cluster-control-plane
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:56Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7ca5fb996fb18
+    namespace: ingress-nginx
+    resourceVersion: "131739"
+    uid: b037900d-028e-4071-9774-e3f81f9a6c66
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 3
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131735"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:04:58Z"
+  message: 'MountVolume.SetUp failed for volume "webhook-cert" : secret "ingress-nginx-admission"
+    not found'
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:56Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7ca5fdc15013b
+    namespace: ingress-nginx
+    resourceVersion: "131752"
+    uid: 1b3a626f-df4a-4a93-95db-b80b0e5e7a6e
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Warning
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131735"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:05:03Z"
+  message: Container image "registry.k8s.io/ingress-nginx/controller:v1.9.6@sha256:1405cc613bd95b2c6edd8b2a152510ae91c7e62aea4698500d23b2145960ab9c"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:03Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7ca61772670f6
+    namespace: ingress-nginx
+    resourceVersion: "131772"
+    uid: f470ae64-9c88-4e82-bf0c-d4a92c5cf2a6
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131735"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:05:03Z"
+  message: Created container controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:04Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7ca618fcb03f7
+    namespace: ingress-nginx
+    resourceVersion: "131775"
+    uid: 26a58d43-21fe-4324-9525-e92981444c89
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131735"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:05:05Z"
+  message: Started container controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:05Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7ca61cccd9b7b
+    namespace: ingress-nginx
+    resourceVersion: "131782"
+    uid: 5f076c99-d97e-4871-8ba3-e4da465efdc7
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 5
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:07Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131742"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:19:24Z"
+  message: NGINX reload triggered due to a change in configuration
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:07Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7ca626b510a56
+    namespace: ingress-nginx
+    resourceVersion: "133153"
+    uid: 239ac4e5-6a0f-476a-9342-647f0722ece0
+  reason: RELOAD
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131735"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:31:55Z"
+  message: Stopping container controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:55Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7cbd8dc09e4a4
+    namespace: ingress-nginx
+    resourceVersion: "134289"
+    uid: d6e199d8-6fed-4163-8761-b67d09c6c75f
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8
+    namespace: ingress-nginx
+    resourceVersion: "131735"
+    uid: 9dbb8427-803e-4eb2-b4fc-fc20f1cc0955
+  lastTimestamp: "2024-02-27T18:31:59Z"
+  message: PreStopHook failed
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:59Z"
+    name: ingress-nginx-controller-6f5b7cc8d4-x5lx8.17b7cbd9af01f456
+    namespace: ingress-nginx
+    resourceVersion: "134310"
+    uid: 26679c14-488b-4cc1-ae8d-4567d197930f
+  reason: FailedPreStopHook
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Warning
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: ingress-nginx-controller-6f5b7cc8d4
+    namespace: ingress-nginx
+    resourceVersion: "131719"
+    uid: f707a4a4-cf38-4ae3-8211-eff5de9ad3eb
+  lastTimestamp: "2024-02-27T18:04:55Z"
+  message: 'Created pod: ingress-nginx-controller-6f5b7cc8d4-x5lx8'
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:55Z"
+    name: ingress-nginx-controller-6f5b7cc8d4.17b7ca5faf61a08b
+    namespace: ingress-nginx
+    resourceVersion: "131731"
+    uid: 7bc24233-dade-45c4-bf51-4ab2be1a5850
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: ingress-nginx-controller-6f5b7cc8d4
+    namespace: ingress-nginx
+    resourceVersion: "134277"
+    uid: f707a4a4-cf38-4ae3-8211-eff5de9ad3eb
+  lastTimestamp: "2024-02-27T18:31:55Z"
+  message: 'Deleted pod: ingress-nginx-controller-6f5b7cc8d4-x5lx8'
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:55Z"
+    name: ingress-nginx-controller-6f5b7cc8d4.17b7cbd8da3bf7e8
+    namespace: ingress-nginx
+    resourceVersion: "134291"
+    uid: 03440303-bd03-4841-82f2-43a39091f2de
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-controller-8577696655-85kfw
+    namespace: ingress-nginx
+    resourceVersion: "134281"
+    uid: 0b187bb6-4c14-4d01-8803-241e618c1481
+  lastTimestamp: "2024-02-27T18:31:56Z"
+  message: Successfully assigned ingress-nginx/ingress-nginx-controller-8577696655-85kfw
+    to fever-cluster-control-plane
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:56Z"
+    name: ingress-nginx-controller-8577696655-85kfw.17b7cbd8e6567490
+    namespace: ingress-nginx
+    resourceVersion: "134296"
+    uid: 3b622acf-ff3d-4da2-bfda-f3e294dc7810
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-8577696655-85kfw
+    namespace: ingress-nginx
+    resourceVersion: "134288"
+    uid: 0b187bb6-4c14-4d01-8803-241e618c1481
+  lastTimestamp: "2024-02-27T18:31:58Z"
+  message: Container image "registry.k8s.io/ingress-nginx/controller:v1.9.6@sha256:1405cc613bd95b2c6edd8b2a152510ae91c7e62aea4698500d23b2145960ab9c"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:58Z"
+    name: ingress-nginx-controller-8577696655-85kfw.17b7cbd96bfaec1a
+    namespace: ingress-nginx
+    resourceVersion: "134305"
+    uid: c021b0ec-6161-4b7b-823c-7689428dfced
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-8577696655-85kfw
+    namespace: ingress-nginx
+    resourceVersion: "134288"
+    uid: 0b187bb6-4c14-4d01-8803-241e618c1481
+  lastTimestamp: "2024-02-27T18:31:58Z"
+  message: Created container controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:58Z"
+    name: ingress-nginx-controller-8577696655-85kfw.17b7cbd98d779c8f
+    namespace: ingress-nginx
+    resourceVersion: "134308"
+    uid: bf9a8066-672b-4d76-8517-b90983f61a57
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: ingress-nginx-controller-8577696655-85kfw
+    namespace: ingress-nginx
+    resourceVersion: "134288"
+    uid: 0b187bb6-4c14-4d01-8803-241e618c1481
+  lastTimestamp: "2024-02-27T18:31:59Z"
+  message: Started container controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:59Z"
+    name: ingress-nginx-controller-8577696655-85kfw.17b7cbd9b0a6c04c
+    namespace: ingress-nginx
+    resourceVersion: "134311"
+    uid: 8b172b9b-0f66-4afa-b578-a8d59ea44dd9
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: fever-cluster-control-plane
+  source:
+    component: kubelet
+    host: fever-cluster-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:32:01Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-nginx-controller-8577696655-85kfw
+    namespace: ingress-nginx
+    resourceVersion: "134312"
+    uid: 0b187bb6-4c14-4d01-8803-241e618c1481
+  lastTimestamp: "2024-02-27T18:32:01Z"
+  message: NGINX reload triggered due to a change in configuration
+  metadata:
+    creationTimestamp: "2024-02-27T18:32:01Z"
+    name: ingress-nginx-controller-8577696655-85kfw.17b7cbda3e1db902
+    namespace: ingress-nginx
+    resourceVersion: "134321"
+    uid: 0d34a4d5-03b2-4881-ae46-2c52562e9431
+  reason: RELOAD
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: ingress-nginx-controller-8577696655
+    namespace: ingress-nginx
+    resourceVersion: "134274"
+    uid: ca7efa00-1fe7-4c51-9cc1-5c65e0a7ee76
+  lastTimestamp: "2024-02-27T18:31:55Z"
+  message: 'Created pod: ingress-nginx-controller-8577696655-85kfw'
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:55Z"
+    name: ingress-nginx-controller-8577696655.17b7cbd8da39b1e7
+    namespace: ingress-nginx
+    resourceVersion: "134285"
+    uid: a3c0ada9-3fbf-4e70-9ce9-ea3a6d74ac61
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:04:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "131714"
+    uid: 3174ce68-b4ca-4320-8fbb-0fbd59d06476
+  lastTimestamp: "2024-02-27T18:04:55Z"
+  message: Scaled up replica set ingress-nginx-controller-6f5b7cc8d4 to 1
+  metadata:
+    creationTimestamp: "2024-02-27T18:04:55Z"
+    name: ingress-nginx-controller.17b7ca5faa37f4b5
+    namespace: ingress-nginx
+    resourceVersion: "131724"
+    uid: 1d99e93d-6137-4085-9100-bf8376dd0764
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:05:06Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "131703"
+    uid: 4aa6f7b8-ca76-4154-b618-ef66f66f77f8
+  lastTimestamp: "2024-02-27T18:05:06Z"
+  message: ConfigMap ingress-nginx/ingress-nginx-controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:05:06Z"
+    name: ingress-nginx-controller.17b7ca6218f8adaf
+    namespace: ingress-nginx
+    resourceVersion: "131797"
+    uid: 317b8b21-f1fb-440b-a480-b88fed11a453
+  reason: CREATE
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "134273"
+    uid: 3174ce68-b4ca-4320-8fbb-0fbd59d06476
+  lastTimestamp: "2024-02-27T18:31:55Z"
+  message: Scaled up replica set ingress-nginx-controller-8577696655 to 1
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:55Z"
+    name: ingress-nginx-controller.17b7cbd8c700f2c6
+    namespace: ingress-nginx
+    resourceVersion: "134276"
+    uid: 44ca1ee0-3595-4262-9ecc-166810ae7272
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:31:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "134273"
+    uid: 3174ce68-b4ca-4320-8fbb-0fbd59d06476
+  lastTimestamp: "2024-02-27T18:31:55Z"
+  message: Scaled down replica set ingress-nginx-controller-6f5b7cc8d4 to 0 from 1
+  metadata:
+    creationTimestamp: "2024-02-27T18:31:55Z"
+    name: ingress-nginx-controller.17b7cbd8cfaa5c06
+    namespace: ingress-nginx
+    resourceVersion: "134278"
+    uid: dd335b29-dbc9-4e14-9361-766b2021cd51
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-02-27T18:32:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: ingress-nginx-controller
+    namespace: ingress-nginx
+    resourceVersion: "131703"
+    uid: 4aa6f7b8-ca76-4154-b618-ef66f66f77f8
+  lastTimestamp: "2024-02-27T18:32:00Z"
+  message: ConfigMap ingress-nginx/ingress-nginx-controller
+  metadata:
+    creationTimestamp: "2024-02-27T18:32:00Z"
+    name: ingress-nginx-controller.17b7cbd9e4ee74b4
+    namespace: ingress-nginx
+    resourceVersion: "134317"
+    uid: de558396-8240-4438-9628-a02c25094049
+  reason: CREATE
+  reportingComponent: nginx-ingress-controller
+  reportingInstance: ""
+  source:
+    component: nginx-ingress-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "136341"

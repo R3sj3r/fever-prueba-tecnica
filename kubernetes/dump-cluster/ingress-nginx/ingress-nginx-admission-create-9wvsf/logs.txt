@@ -1,0 +1,5 @@
+==== START logs for container create of pod ingress-nginx/ingress-nginx-admission-create-9wvsf ====
+W0227 18:04:58.818368       1 client_config.go:618] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+{"err":"secrets \"ingress-nginx-admission\" not found","level":"info","msg":"no secret found","source":"k8s/k8s.go:229","time":"2024-02-27T18:04:58Z"}
+{"level":"info","msg":"creating new secret","source":"cmd/create.go:28","time":"2024-02-27T18:04:58Z"}
+==== END logs for container create of pod ingress-nginx/ingress-nginx-admission-create-9wvsf ====

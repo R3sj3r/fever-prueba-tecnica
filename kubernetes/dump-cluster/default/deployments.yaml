@@ -1,0 +1,140 @@
+---
+apiVersion: apps/v1
+items:
+- metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "2"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"client-fever","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"client-fever"}},"template":{"metadata":{"labels":{"app":"client-fever"}},"spec":{"containers":[{"command":["sleep","3600"],"image":"r3sj3r/fever-prueba:c3","name":"client-fever"}],"hostAliases":[{"hostnames":["server","server.example.com","server.local"],"ip":"10.96.90.34"}]}}}}
+    creationTimestamp: "2024-02-27T12:25:13Z"
+    generation: 2
+    name: client-fever
+    namespace: default
+    resourceVersion: "134421"
+    uid: a7a31960-c235-4d3a-96e9-8f2a59735591
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: client-fever
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: client-fever
+      spec:
+        containers:
+        - command:
+          - sleep
+          - "3600"
+          image: r3sj3r/fever-prueba:c3
+          imagePullPolicy: IfNotPresent
+          name: client-fever
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        hostAliases:
+        - hostnames:
+          - server
+          - server.example.com
+          - server.local
+          ip: 10.96.90.34
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-02-27T12:25:13Z"
+      lastUpdateTime: "2024-02-27T12:32:47Z"
+      message: ReplicaSet "client-fever-689c656477" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2024-02-27T18:33:00Z"
+      lastUpdateTime: "2024-02-27T18:33:00Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"server-fever"},"name":"server-fever","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"server-fever"}},"template":{"metadata":{"labels":{"app":"server-fever"}},"spec":{"containers":[{"image":"r3sj3r/fever-prueba:s5","name":"server-fever","ports":[{"containerPort":5000}]}]}}}}
+    creationTimestamp: "2024-02-27T14:54:02Z"
+    generation: 1
+    labels:
+      app: server-fever
+    name: server-fever
+    namespace: default
+    resourceVersion: "115445"
+    uid: b29450be-2f4c-431b-abf6-d84351a24a2d
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: server-fever
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: server-fever
+      spec:
+        containers:
+        - image: r3sj3r/fever-prueba:s5
+          imagePullPolicy: IfNotPresent
+          name: server-fever
+          ports:
+          - containerPort: 5000
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-02-27T14:54:12Z"
+      lastUpdateTime: "2024-02-27T14:54:12Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-02-27T14:54:02Z"
+      lastUpdateTime: "2024-02-27T14:54:12Z"
+      message: ReplicaSet "server-fever-5768d78bd5" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+kind: DeploymentList
+metadata:
+  resourceVersion: "136341"

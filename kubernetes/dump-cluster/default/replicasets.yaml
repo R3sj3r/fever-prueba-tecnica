@@ -1,0 +1,180 @@
+---
+apiVersion: apps/v1
+items:
+- metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2024-02-27T12:32:38Z"
+    generation: 1
+    labels:
+      app: client-fever
+      pod-template-hash: 689c656477
+    name: client-fever-689c656477
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: client-fever
+      uid: a7a31960-c235-4d3a-96e9-8f2a59735591
+    resourceVersion: "134420"
+    uid: e61a2221-5ade-4539-8af4-81f1a0e5baf5
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: client-fever
+        pod-template-hash: 689c656477
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: client-fever
+          pod-template-hash: 689c656477
+      spec:
+        containers:
+        - command:
+          - sleep
+          - "3600"
+          image: r3sj3r/fever-prueba:c3
+          imagePullPolicy: IfNotPresent
+          name: client-fever
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        hostAliases:
+        - hostnames:
+          - server
+          - server.example.com
+          - server.local
+          ip: 10.96.90.34
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-27T12:25:13Z"
+    generation: 2
+    labels:
+      app: client-fever
+      pod-template-hash: c44f966
+    name: client-fever-c44f966
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: client-fever
+      uid: a7a31960-c235-4d3a-96e9-8f2a59735591
+    resourceVersion: "102503"
+    uid: 18604692-5930-4701-badd-8509d7f1a26b
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: client-fever
+        pod-template-hash: c44f966
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: client-fever
+          pod-template-hash: c44f966
+      spec:
+        containers:
+        - command:
+          - sleep
+          - "3600"
+          image: r3sj3r/fever-prueba:c2
+          imagePullPolicy: IfNotPresent
+          name: client-fever
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        hostAliases:
+        - hostnames:
+          - server
+          - server.example.com
+          - server.local
+          ip: 10.96.90.34
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-27T14:54:02Z"
+    generation: 1
+    labels:
+      app: server-fever
+      pod-template-hash: 5768d78bd5
+    name: server-fever-5768d78bd5
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: server-fever
+      uid: b29450be-2f4c-431b-abf6-d84351a24a2d
+    resourceVersion: "115442"
+    uid: 72dc41c6-4a63-4c7b-a6a4-db529e90d57e
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: server-fever
+        pod-template-hash: 5768d78bd5
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: server-fever
+          pod-template-hash: 5768d78bd5
+      spec:
+        containers:
+        - image: r3sj3r/fever-prueba:s5
+          imagePullPolicy: IfNotPresent
+          name: server-fever
+          ports:
+          - containerPort: 5000
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "136341"

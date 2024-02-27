@@ -1,0 +1,14 @@
+==== START logs for container server-fever of pod default/server-fever-5768d78bd5-s97df ====
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://10.244.1.31:5000
+[33mPress CTRL+C to quit[0m
+10.244.1.17 - - [27/Feb/2024 17:18:25] "GET / HTTP/1.1" 200 -
+10.244.1.17 - - [27/Feb/2024 17:23:45] "GET / HTTP/1.1" 200 -
+10.244.1.17 - - [27/Feb/2024 17:28:59] "GET / HTTP/1.1" 200 -
+10.244.1.17 - - [27/Feb/2024 17:29:01] "GET / HTTP/1.1" 200 -
+10.244.0.6 - - [27/Feb/2024 18:08:27] "GET / HTTP/1.1" 200 -
+10.244.0.6 - - [27/Feb/2024 18:17:36] "GET / HTTP/1.1" 200 -
+10.244.0.6 - - [27/Feb/2024 18:18:41] "GET / HTTP/1.1" 200 -
+==== END logs for container server-fever of pod default/server-fever-5768d78bd5-s97df ====

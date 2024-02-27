@@ -1,0 +1,2 @@
+==== START logs for container client-fever of pod default/client-fever-689c656477-xf66r ====
+==== END logs for container client-fever of pod default/client-fever-689c656477-xf66r ====

@@ -1,0 +1,5 @@
+==== START logs for container patch of pod ingress-nginx/ingress-nginx-admission-patch-m5svm ====
+W0227 18:05:02.067525       1 client_config.go:618] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+{"level":"info","msg":"patching webhook configurations 'ingress-nginx-admission' mutating=false, validating=true, failurePolicy=Fail","source":"k8s/k8s.go:118","time":"2024-02-27T18:05:02Z"}
+{"level":"info","msg":"Patched hook(s)","source":"k8s/k8s.go:138","time":"2024-02-27T18:05:02Z"}
+==== END logs for container patch of pod ingress-nginx/ingress-nginx-admission-patch-m5svm ====

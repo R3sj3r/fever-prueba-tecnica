@@ -1,0 +1,29 @@
+==== START logs for container kube-scheduler of pod kube-system/kube-scheduler-fever-cluster-control-plane ====
+I0227 09:46:25.529220       1 serving.go:380] Generated self-signed cert in-memory
+W0227 09:46:27.069578       1 requestheader_controller.go:193] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+W0227 09:46:27.069658       1 authentication.go:368] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+W0227 09:46:27.069838       1 authentication.go:369] Continuing without authentication configuration. This may treat all requests as anonymous.
+W0227 09:46:27.069872       1 authentication.go:370] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+I0227 09:46:27.108418       1 server.go:154] "Starting Kubernetes Scheduler" version="v1.29.2"
+I0227 09:46:27.110075       1 server.go:156] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0227 09:46:27.116409       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0227 09:46:27.116573       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0227 09:46:27.118332       1 secure_serving.go:213] Serving securely on 127.0.0.1:10259
+I0227 09:46:27.118567       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0227 09:46:27.219023       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0227 09:46:27.319540       1 leaderelection.go:250] attempting to acquire leader lease kube-system/kube-scheduler...
+I0227 09:46:43.078868       1 leaderelection.go:260] successfully acquired lease kube-system/kube-scheduler
+I0227 12:54:12.917993       1 trace.go:236] Trace[327917474]: "Scheduling" namespace:default,name:server-fever-645468cd87-dfnx2 (27-Feb-2024 12:54:12.772) (total time: 117ms):
+Trace[327917474]: ---"Computing predicates done" 112ms (12:54:12.888)
+Trace[327917474]: [117.476937ms] [117.476937ms] END
+I0227 14:02:22.929012       1 trace.go:236] Trace[41678279]: "Scheduling" namespace:ingress-nginx,name:ingress-nginx-controller-568fb54f96-s2sz5 (27-Feb-2024 14:02:22.778) (total time: 138ms):
+Trace[41678279]: ---"Snapshotting scheduler cache and node infos done" 78ms (14:02:22.856)
+Trace[41678279]: ---"Computing predicates done" 59ms (14:02:22.915)
+Trace[41678279]: [138.275993ms] [138.275993ms] END
+I0227 14:39:05.733739       1 trace.go:236] Trace[1440551032]: "Scheduling" namespace:default,name:server-fever-74cc444948-47g9x (27-Feb-2024 14:39:05.557) (total time: 155ms):
+Trace[1440551032]: ---"Computing predicates done" 154ms (14:39:05.713)
+Trace[1440551032]: [155.52646ms] [155.52646ms] END
+I0227 14:44:33.696279       1 trace.go:236] Trace[1799210186]: "Scheduling" namespace:default,name:server-fever-645468cd87-htkgt (27-Feb-2024 14:44:33.325) (total time: 112ms):
+Trace[1799210186]: ---"Computing predicates done" 96ms (14:44:33.438)
+Trace[1799210186]: [112.775966ms] [112.775966ms] END
+==== END logs for container kube-scheduler of pod kube-system/kube-scheduler-fever-cluster-control-plane ====

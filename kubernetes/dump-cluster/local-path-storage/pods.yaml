@@ -1,0 +1,151 @@
+---
+apiVersion: v1
+items:
+- metadata:
+    creationTimestamp: "2024-02-25T15:51:13Z"
+    generateName: local-path-provisioner-7577fdbbfb-
+    labels:
+      app: local-path-provisioner
+      pod-template-hash: 7577fdbbfb
+    name: local-path-provisioner-7577fdbbfb-sgxf6
+    namespace: local-path-storage
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: local-path-provisioner-7577fdbbfb
+      uid: e62a011c-ba84-4bbf-8779-a07f66ac00d2
+    resourceVersion: "88241"
+    uid: b87afe12-0754-4fe8-b956-2a14f73c042d
+  spec:
+    containers:
+    - command:
+      - local-path-provisioner
+      - --debug
+      - start
+      - --helper-image
+      - docker.io/kindest/local-path-helper:v20230510-486859a6
+      - --config
+      - /etc/config/config.json
+      env:
+      - name: POD_NAMESPACE
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.namespace
+      image: docker.io/kindest/local-path-provisioner:v20240202-8f1494ea
+      imagePullPolicy: IfNotPresent
+      name: local-path-provisioner
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/config/
+        name: config-volume
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rvjl8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: fever-cluster-control-plane
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: local-path-provisioner-service-account
+    serviceAccountName: local-path-provisioner-service-account
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/control-plane
+      operator: Equal
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Equal
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - configMap:
+        defaultMode: 420
+        name: local-path-config
+      name: config-volume
+    - name: kube-api-access-rvjl8
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-27T09:46:30Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-25T15:51:19Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-27T09:47:14Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-27T09:47:14Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-25T15:51:19Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://d751bd28fd71dd0467e87267ddb12a3da77423959cba90bda3beb6a88e5150bd
+      image: docker.io/kindest/local-path-provisioner:v20240202-8f1494ea
+      imageID: sha256:0500518ebaa68d16973c65dc0b776813b50ab6e7e8f112fca41aca387a549d4f
+      lastState:
+        terminated:
+          containerID: containerd://3b706ab9517dc67fd943d741a20f79e60996d74a9986b17cf86d3f0bb20044bf
+          exitCode: 1
+          finishedAt: "2024-02-27T09:47:00Z"
+          reason: Error
+          startedAt: "2024-02-27T09:46:29Z"
+      name: local-path-provisioner
+      ready: true
+      restartCount: 6
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-27T09:47:13Z"
+    hostIP: 172.18.0.3
+    hostIPs:
+    - ip: 172.18.0.3
+    phase: Running
+    podIP: 10.244.0.3
+    podIPs:
+    - ip: 10.244.0.3
+    qosClass: BestEffort
+    startTime: "2024-02-25T15:51:19Z"
+kind: PodList
+metadata:
+  resourceVersion: "136347"

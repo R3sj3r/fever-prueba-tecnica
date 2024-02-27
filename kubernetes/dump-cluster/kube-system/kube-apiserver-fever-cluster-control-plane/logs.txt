@@ -1,0 +1,528 @@
+==== START logs for container kube-apiserver of pod kube-system/kube-apiserver-fever-cluster-control-plane ====
+I0227 09:46:24.911212       1 options.go:222] external host was not specified, using 172.18.0.3
+I0227 09:46:24.917340       1 server.go:148] Version: v1.29.2
+I0227 09:46:24.917512       1 server.go:150] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0227 09:46:25.436349       1 shared_informer.go:311] Waiting for caches to sync for node_authorizer
+I0227 09:46:25.441105       1 plugins.go:157] Loaded 12 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,MutatingAdmissionWebhook.
+I0227 09:46:25.441287       1 plugins.go:160] Loaded 13 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,PodSecurity,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,ClusterTrustBundleAttest,CertificateSubjectRestriction,ValidatingAdmissionPolicy,ValidatingAdmissionWebhook,ResourceQuota.
+I0227 09:46:25.443873       1 instance.go:297] Using reconciler: lease
+I0227 09:46:25.789256       1 handler.go:275] Adding GroupVersion apiextensions.k8s.io v1 to ResourceManager
+W0227 09:46:25.789447       1 genericapiserver.go:742] Skipping API apiextensions.k8s.io/v1beta1 because it has no resources.
+I0227 09:46:26.006147       1 handler.go:275] Adding GroupVersion  v1 to ResourceManager
+I0227 09:46:26.006377       1 instance.go:693] API group "internal.apiserver.k8s.io" is not enabled, skipping.
+I0227 09:46:26.327614       1 instance.go:693] API group "resource.k8s.io" is not enabled, skipping.
+I0227 09:46:26.344545       1 handler.go:275] Adding GroupVersion authentication.k8s.io v1 to ResourceManager
+W0227 09:46:26.344646       1 genericapiserver.go:742] Skipping API authentication.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.344658       1 genericapiserver.go:742] Skipping API authentication.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.352560       1 handler.go:275] Adding GroupVersion authorization.k8s.io v1 to ResourceManager
+W0227 09:46:26.352604       1 genericapiserver.go:742] Skipping API authorization.k8s.io/v1beta1 because it has no resources.
+I0227 09:46:26.353595       1 handler.go:275] Adding GroupVersion autoscaling v2 to ResourceManager
+I0227 09:46:26.355928       1 handler.go:275] Adding GroupVersion autoscaling v1 to ResourceManager
+W0227 09:46:26.355961       1 genericapiserver.go:742] Skipping API autoscaling/v2beta1 because it has no resources.
+W0227 09:46:26.355969       1 genericapiserver.go:742] Skipping API autoscaling/v2beta2 because it has no resources.
+I0227 09:46:26.359104       1 handler.go:275] Adding GroupVersion batch v1 to ResourceManager
+W0227 09:46:26.359197       1 genericapiserver.go:742] Skipping API batch/v1beta1 because it has no resources.
+I0227 09:46:26.363722       1 handler.go:275] Adding GroupVersion certificates.k8s.io v1 to ResourceManager
+W0227 09:46:26.364082       1 genericapiserver.go:742] Skipping API certificates.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.364125       1 genericapiserver.go:742] Skipping API certificates.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.364473       1 handler.go:275] Adding GroupVersion coordination.k8s.io v1 to ResourceManager
+W0227 09:46:26.364511       1 genericapiserver.go:742] Skipping API coordination.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.364534       1 genericapiserver.go:742] Skipping API discovery.k8s.io/v1beta1 because it has no resources.
+I0227 09:46:26.364858       1 handler.go:275] Adding GroupVersion discovery.k8s.io v1 to ResourceManager
+I0227 09:46:26.366115       1 handler.go:275] Adding GroupVersion networking.k8s.io v1 to ResourceManager
+W0227 09:46:26.366240       1 genericapiserver.go:742] Skipping API networking.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.366244       1 genericapiserver.go:742] Skipping API networking.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.367071       1 handler.go:275] Adding GroupVersion node.k8s.io v1 to ResourceManager
+W0227 09:46:26.367112       1 genericapiserver.go:742] Skipping API node.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.367115       1 genericapiserver.go:742] Skipping API node.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.367603       1 handler.go:275] Adding GroupVersion policy v1 to ResourceManager
+W0227 09:46:26.367638       1 genericapiserver.go:742] Skipping API policy/v1beta1 because it has no resources.
+I0227 09:46:26.368583       1 handler.go:275] Adding GroupVersion rbac.authorization.k8s.io v1 to ResourceManager
+W0227 09:46:26.368637       1 genericapiserver.go:742] Skipping API rbac.authorization.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.368641       1 genericapiserver.go:742] Skipping API rbac.authorization.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.369059       1 handler.go:275] Adding GroupVersion scheduling.k8s.io v1 to ResourceManager
+W0227 09:46:26.369091       1 genericapiserver.go:742] Skipping API scheduling.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.369114       1 genericapiserver.go:742] Skipping API scheduling.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.370328       1 handler.go:275] Adding GroupVersion storage.k8s.io v1 to ResourceManager
+W0227 09:46:26.370388       1 genericapiserver.go:742] Skipping API storage.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.370393       1 genericapiserver.go:742] Skipping API storage.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.371088       1 handler.go:275] Adding GroupVersion flowcontrol.apiserver.k8s.io v1beta3 to ResourceManager
+I0227 09:46:26.371827       1 handler.go:275] Adding GroupVersion flowcontrol.apiserver.k8s.io v1 to ResourceManager
+W0227 09:46:26.371833       1 genericapiserver.go:742] Skipping API flowcontrol.apiserver.k8s.io/v1beta2 because it has no resources.
+W0227 09:46:26.371836       1 genericapiserver.go:742] Skipping API flowcontrol.apiserver.k8s.io/v1beta1 because it has no resources.
+I0227 09:46:26.373845       1 handler.go:275] Adding GroupVersion apps v1 to ResourceManager
+W0227 09:46:26.373928       1 genericapiserver.go:742] Skipping API apps/v1beta2 because it has no resources.
+W0227 09:46:26.373932       1 genericapiserver.go:742] Skipping API apps/v1beta1 because it has no resources.
+I0227 09:46:26.374494       1 handler.go:275] Adding GroupVersion admissionregistration.k8s.io v1 to ResourceManager
+W0227 09:46:26.374536       1 genericapiserver.go:742] Skipping API admissionregistration.k8s.io/v1beta1 because it has no resources.
+W0227 09:46:26.374539       1 genericapiserver.go:742] Skipping API admissionregistration.k8s.io/v1alpha1 because it has no resources.
+I0227 09:46:26.375294       1 handler.go:275] Adding GroupVersion events.k8s.io v1 to ResourceManager
+W0227 09:46:26.375301       1 genericapiserver.go:742] Skipping API events.k8s.io/v1beta1 because it has no resources.
+I0227 09:46:26.390421       1 handler.go:275] Adding GroupVersion apiregistration.k8s.io v1 to ResourceManager
+W0227 09:46:26.390459       1 genericapiserver.go:742] Skipping API apiregistration.k8s.io/v1beta1 because it has no resources.
+I0227 09:46:26.971326       1 dynamic_cafile_content.go:157] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+I0227 09:46:26.971508       1 dynamic_cafile_content.go:157] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+I0227 09:46:26.972008       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/etc/kubernetes/pki/apiserver.crt::/etc/kubernetes/pki/apiserver.key"
+I0227 09:46:26.972651       1 secure_serving.go:213] Serving securely on [::]:6443
+I0227 09:46:26.972998       1 dynamic_serving_content.go:132] "Starting controller" name="aggregator-proxy-cert::/etc/kubernetes/pki/front-proxy-client.crt::/etc/kubernetes/pki/front-proxy-client.key"
+I0227 09:46:26.973289       1 gc_controller.go:78] Starting apiserver lease garbage collector
+I0227 09:46:26.973331       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0227 09:46:26.976342       1 controller.go:78] Starting OpenAPI AggregationController
+I0227 09:46:26.976445       1 apf_controller.go:374] Starting API Priority and Fairness config controller
+I0227 09:46:26.977224       1 cluster_authentication_trust_controller.go:440] Starting cluster_authentication_trust_controller controller
+I0227 09:46:26.977262       1 shared_informer.go:311] Waiting for caches to sync for cluster_authentication_trust_controller
+I0227 09:46:26.977373       1 controller.go:116] Starting legacy_token_tracking_controller
+I0227 09:46:26.977405       1 shared_informer.go:311] Waiting for caches to sync for configmaps
+I0227 09:46:26.977654       1 apiservice_controller.go:97] Starting APIServiceRegistrationController
+I0227 09:46:26.977678       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+I0227 09:46:26.978047       1 available_controller.go:423] Starting AvailableConditionController
+I0227 09:46:26.978855       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+I0227 09:46:26.979306       1 customresource_discovery_controller.go:289] Starting DiscoveryController
+I0227 09:46:26.981027       1 aggregator.go:163] waiting for initial CRD sync...
+I0227 09:46:26.991323       1 dynamic_cafile_content.go:157] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+I0227 09:46:26.991391       1 dynamic_cafile_content.go:157] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+I0227 09:46:26.978147       1 system_namespaces_controller.go:67] Starting system namespaces controller
+I0227 09:46:26.996600       1 controller.go:133] Starting OpenAPI controller
+I0227 09:46:26.998263       1 controller.go:85] Starting OpenAPI V3 controller
+I0227 09:46:26.999279       1 naming_controller.go:291] Starting NamingConditionController
+I0227 09:46:26.999448       1 establishing_controller.go:76] Starting EstablishingController
+I0227 09:46:26.999533       1 nonstructuralschema_controller.go:192] Starting NonStructuralSchemaConditionController
+I0227 09:46:26.999620       1 apiapproval_controller.go:186] Starting KubernetesAPIApprovalPolicyConformantConditionController
+I0227 09:46:26.999654       1 crd_finalizer.go:266] Starting CRDFinalizer
+I0227 09:46:26.999674       1 crdregistration_controller.go:111] Starting crd-autoregister controller
+I0227 09:46:26.999678       1 shared_informer.go:311] Waiting for caches to sync for crd-autoregister
+I0227 09:46:26.978156       1 controller.go:80] Starting OpenAPI V3 AggregationController
+I0227 09:46:26.978190       1 handler_discovery.go:412] Starting ResourceDiscoveryManager
+I0227 09:46:27.133538       1 controller.go:624] quota admission added evaluator for: leases.coordination.k8s.io
+I0227 09:46:27.145862       1 shared_informer.go:318] Caches are synced for node_authorizer
+I0227 09:46:27.182789       1 apf_controller.go:379] Running API Priority and Fairness config worker
+I0227 09:46:27.186056       1 apf_controller.go:382] Running API Priority and Fairness periodic rebalancing process
+I0227 09:46:27.189417       1 shared_informer.go:318] Caches are synced for cluster_authentication_trust_controller
+I0227 09:46:27.189488       1 shared_informer.go:318] Caches are synced for configmaps
+I0227 09:46:27.189533       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+I0227 09:46:27.216767       1 cache.go:39] Caches are synced for AvailableConditionController controller
+I0227 09:46:27.221001       1 shared_informer.go:318] Caches are synced for crd-autoregister
+I0227 09:46:27.221449       1 aggregator.go:165] initial CRD sync complete...
+I0227 09:46:27.221532       1 autoregister_controller.go:141] Starting autoregister controller
+I0227 09:46:27.221539       1 cache.go:32] Waiting for caches to sync for autoregister controller
+I0227 09:46:27.221543       1 cache.go:39] Caches are synced for autoregister controller
+E0227 09:46:27.245179       1 controller.go:97] Error removing old endpoints from kubernetes service: no API server IP addresses were listed in storage, refusing to erase all endpoints for the kubernetes Service
+I0227 09:46:28.003553       1 storage_scheduling.go:111] all system priority classes are created successfully or already exist.
+I0227 09:46:56.973117       1 controller.go:624] quota admission added evaluator for: endpointslices.discovery.k8s.io
+I0227 09:46:57.221856       1 controller.go:624] quota admission added evaluator for: endpoints
+I0227 10:12:43.473542       1 controller.go:624] quota admission added evaluator for: deployments.apps
+I0227 10:12:43.614588       1 controller.go:624] quota admission added evaluator for: replicasets.apps
+E0227 10:15:57.195725       1 upgradeaware.go:425] Error proxying data from client to backend: write tcp 172.18.0.3:49172->172.18.0.2:10250: write: broken pipe
+I0227 11:10:31.033045       1 trace.go:236] Trace[1280944876]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:48c72be4-7dcd-40fe-9260-ecb224ae029e,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:10:30.478) (total time: 503ms):
+Trace[1280944876]: ["GuaranteedUpdate etcd3" audit-id:48c72be4-7dcd-40fe-9260-ecb224ae029e,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 503ms (11:10:30.479)
+Trace[1280944876]:  ---"About to Encode" 322ms (11:10:30.801)
+Trace[1280944876]:  ---"Txn call completed" 179ms (11:10:30.981)]
+Trace[1280944876]: [503.500462ms] [503.500462ms] END
+I0227 11:10:31.045294       1 trace.go:236] Trace[503077588]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:061a1a31-e16d-4f81-a075-8ed26dc9fc1b,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:10:30.502) (total time: 540ms):
+Trace[503077588]: ["GuaranteedUpdate etcd3" audit-id:061a1a31-e16d-4f81-a075-8ed26dc9fc1b,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 543ms (11:10:30.502)
+Trace[503077588]:  ---"Txn call completed" 538ms (11:10:31.042)]
+Trace[503077588]: [540.851937ms] [540.851937ms] END
+I0227 11:10:40.316062       1 trace.go:236] Trace[151487778]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 11:10:39.695) (total time: 572ms):
+Trace[151487778]: ---"initial value restored" 452ms (11:10:40.148)
+Trace[151487778]: ---"Txn call completed" 60ms (11:10:40.267)
+Trace[151487778]: [572.512185ms] [572.512185ms] END
+I0227 11:10:41.505924       1 trace.go:236] Trace[1461203133]: "Update" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:51cfae06-e083-44a0-80a6-57b753467030,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:fever-cluster-control-plane,subresource:,namespace:kube-node-lease,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/fever-cluster-control-plane,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 11:10:40.999) (total time: 506ms):
+Trace[1461203133]: ---"limitedReadBody succeeded" len:534 222ms (11:10:41.221)
+Trace[1461203133]: [506.304934ms] [506.304934ms] END
+I0227 11:10:45.179257       1 trace.go:236] Trace[891131929]: "List" accept:application/json, */*,audit-id:4cbca491-eae6-4381-b420-30b1787f6535,client:172.18.0.3,api-group:,api-version:v1,name:,subresource:,namespace:,protocol:HTTP/2.0,resource:nodes,scope:cluster,url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,verb:LIST (27-Feb-2024 11:10:44.613) (total time: 565ms):
+Trace[891131929]: ---"Writing http response done" count:2 185ms (11:10:45.179)
+Trace[891131929]: [565.79527ms] [565.79527ms] END
+I0227 11:10:45.181799       1 trace.go:236] Trace[972855604]: "List" accept:application/json, */*,audit-id:4f983fa9-127b-425b-9ce1-b942f976bbea,client:172.18.0.2,api-group:,api-version:v1,name:,subresource:,namespace:,protocol:HTTP/2.0,resource:nodes,scope:cluster,url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,verb:LIST (27-Feb-2024 11:10:44.595) (total time: 586ms):
+Trace[972855604]: ---"Writing http response done" count:2 187ms (11:10:45.181)
+Trace[972855604]: [586.287556ms] [586.287556ms] END
+I0227 11:10:50.403268       1 trace.go:236] Trace[2124877231]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 11:10:49.714) (total time: 674ms):
+Trace[2124877231]: ---"initial value restored" 105ms (11:10:49.820)
+Trace[2124877231]: ---"Txn call completed" 516ms (11:10:50.389)
+Trace[2124877231]: [674.543684ms] [674.543684ms] END
+I0227 11:10:54.829674       1 trace.go:236] Trace[1056497005]: "Update" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:baf61217-4842-4c69-b054-41bea95a09bd,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:fever-cluster-control-plane,subresource:,namespace:kube-node-lease,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/fever-cluster-control-plane,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 11:10:54.256) (total time: 573ms):
+Trace[1056497005]: ---"Conversion done" 65ms (11:10:54.322)
+Trace[1056497005]: ["GuaranteedUpdate etcd3" audit-id:baf61217-4842-4c69-b054-41bea95a09bd,key:/leases/kube-node-lease/fever-cluster-control-plane,type:*coordination.Lease,resource:leases.coordination.k8s.io 506ms (11:10:54.322)
+Trace[1056497005]:  ---"About to Encode" 315ms (11:10:54.637)
+Trace[1056497005]:  ---"Txn call completed" 191ms (11:10:54.829)]
+Trace[1056497005]: [573.238267ms] [573.238267ms] END
+I0227 11:10:57.256346       1 trace.go:236] Trace[1824014259]: "Update" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:dd4f91b6-5500-48ed-9185-27c2c922bd62,client:172.18.0.2,api-group:coordination.k8s.io,api-version:v1,name:fever-cluster-worker,subresource:,namespace:kube-node-lease,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/fever-cluster-worker,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 11:10:56.093) (total time: 1162ms):
+Trace[1824014259]: ["GuaranteedUpdate etcd3" audit-id:dd4f91b6-5500-48ed-9185-27c2c922bd62,key:/leases/kube-node-lease/fever-cluster-worker,type:*coordination.Lease,resource:leases.coordination.k8s.io 1162ms (11:10:56.093)
+Trace[1824014259]:  ---"Txn call completed" 1150ms (11:10:57.254)]
+Trace[1824014259]: [1.162775218s] [1.162775218s] END
+I0227 11:10:58.228467       1 trace.go:236] Trace[607565437]: "DeltaFIFO Pop Process" ID:v1.apps,Depth:20,Reason:slow event handlers blocking the queue (27-Feb-2024 11:10:58.052) (total time: 101ms):
+Trace[607565437]: [101.177116ms] [101.177116ms] END
+I0227 11:10:58.316702       1 trace.go:236] Trace[2082073277]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:2a324aca-ec05-40ca-ad31-b4713197d3a4,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:10:57.334) (total time: 934ms):
+Trace[2082073277]: ["GuaranteedUpdate etcd3" audit-id:2a324aca-ec05-40ca-ad31-b4713197d3a4,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 982ms (11:10:57.334)
+Trace[2082073277]:  ---"About to Encode" 543ms (11:10:57.877)
+Trace[2082073277]:  ---"Txn call completed" 390ms (11:10:58.268)]
+Trace[2082073277]: [934.626483ms] [934.626483ms] END
+I0227 11:10:58.408594       1 trace.go:236] Trace[1190114718]: "DeltaFIFO Pop Process" ID:v1.,Depth:14,Reason:slow event handlers blocking the queue (27-Feb-2024 11:10:58.284) (total time: 124ms):
+Trace[1190114718]: [124.146156ms] [124.146156ms] END
+I0227 11:10:58.956589       1 trace.go:236] Trace[5266242]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:564b6912-7693-471b-8ab7-c2b81b96fee2,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:10:58.222) (total time: 733ms):
+Trace[5266242]: ---"Conversion done" 161ms (11:10:58.389)
+Trace[5266242]: ["GuaranteedUpdate etcd3" audit-id:564b6912-7693-471b-8ab7-c2b81b96fee2,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 557ms (11:10:58.398)
+Trace[5266242]:  ---"Txn call completed" 547ms (11:10:58.956)]
+Trace[5266242]: [733.640785ms] [733.640785ms] END
+I0227 11:11:00.696260       1 trace.go:236] Trace[887881938]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 11:11:00.032) (total time: 659ms):
+Trace[887881938]: ---"initial value restored" 119ms (11:11:00.151)
+Trace[887881938]: ---"Transaction prepared" 158ms (11:11:00.310)
+Trace[887881938]: ---"Txn call completed" 381ms (11:11:00.692)
+Trace[887881938]: [659.480602ms] [659.480602ms] END
+I0227 11:48:20.079388       1 trace.go:236] Trace[1321772043]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:b8353f1d-d232-49f2-ab92-eab95ac50b57,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 11:48:19.402) (total time: 649ms):
+Trace[1321772043]: ---"About to write a response" 648ms (11:48:20.051)
+Trace[1321772043]: [649.290158ms] [649.290158ms] END
+I0227 11:48:20.117408       1 trace.go:236] Trace[597732509]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:88d679ef-67ae-427d-9b11-135c113cedc6,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 11:48:19.433) (total time: 683ms):
+Trace[597732509]: ---"About to write a response" 681ms (11:48:20.115)
+Trace[597732509]: [683.9193ms] [683.9193ms] END
+I0227 11:52:17.313454       1 trace.go:236] Trace[140450325]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:17ab892b-71d0-45c3-bdf3-9562bd89fa28,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:52:16.572) (total time: 708ms):
+Trace[140450325]: ["GuaranteedUpdate etcd3" audit-id:17ab892b-71d0-45c3-bdf3-9562bd89fa28,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 708ms (11:52:16.572)
+Trace[140450325]:  ---"Txn call completed" 678ms (11:52:17.267)]
+Trace[140450325]: [708.694882ms] [708.694882ms] END
+I0227 11:52:17.314363       1 trace.go:236] Trace[1274493435]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:c54d4b5b-43e0-4594-adcf-05e2e19d8b40,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:52:16.531) (total time: 735ms):
+Trace[1274493435]: ["GuaranteedUpdate etcd3" audit-id:c54d4b5b-43e0-4594-adcf-05e2e19d8b40,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 735ms (11:52:16.531)
+Trace[1274493435]:  ---"Txn call completed" 732ms (11:52:17.266)]
+Trace[1274493435]: [735.171094ms] [735.171094ms] END
+I0227 11:52:30.724054       1 trace.go:236] Trace[1182748247]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:0f718a41-03d5-4825-b222-b75810ce9803,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 11:52:30.106) (total time: 598ms):
+Trace[1182748247]: ["GuaranteedUpdate etcd3" audit-id:0f718a41-03d5-4825-b222-b75810ce9803,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 598ms (11:52:30.106)
+Trace[1182748247]:  ---"Txn call completed" 596ms (11:52:30.705)]
+Trace[1182748247]: [598.590457ms] [598.590457ms] END
+I0227 11:52:30.725524       1 trace.go:236] Trace[1143711807]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:fd1e9f81-45de-4fd8-9169-f3b80aeabfce,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 11:52:30.121) (total time: 566ms):
+Trace[1143711807]: ---"About to write a response" 552ms (11:52:30.674)
+Trace[1143711807]: [566.43451ms] [566.43451ms] END
+I0227 11:52:30.732907       1 trace.go:236] Trace[1539459906]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 11:52:30.125) (total time: 607ms):
+Trace[1539459906]: ---"initial value restored" 568ms (11:52:30.693)
+Trace[1539459906]: [607.531339ms] [607.531339ms] END
+E0227 11:54:19.825802       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 11:54:19.825929       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 11:54:19.827808       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 11:54:19.828145       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 11:54:19.829612       1 timeout.go:142] post-timeout activity - time-elapsed: 18.984542ms, GET "/apis/apps/v1/namespaces/default/deployments" result: <nil>
+E0227 11:54:20.179748       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 11:54:20.179832       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 11:54:20.183780       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 11:54:20.183825       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 11:54:20.185783       1 timeout.go:142] post-timeout activity - time-elapsed: 6.605544ms, GET "/apis/apps/v1/namespaces/default/deployments" result: <nil>
+E0227 11:54:20.805866       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 11:54:20.808743       1 timeout.go:142] post-timeout activity - time-elapsed: 19.954µs, GET "/apis/apps/v1/namespaces/default/deployments" result: <nil>
+E0227 11:54:20.813776       1 wrap.go:54] timeout or abort while handling: method=GET URI="/apis/apps/v1/namespaces/default/deployments?limit=500" audit-ID="f14f4587-4b65-4ebb-9ef6-da1227d31430"
+I0227 12:31:25.364017       1 trace.go:236] Trace[138844533]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 12:31:20.923) (total time: 3438ms):
+Trace[138844533]: ---"initial value restored" 825ms (12:31:21.748)
+Trace[138844533]: ---"Transaction prepared" 704ms (12:31:22.481)
+Trace[138844533]: ---"Txn call completed" 1880ms (12:31:24.362)
+Trace[138844533]: [3.438792903s] [3.438792903s] END
+I0227 12:31:25.365894       1 trace.go:236] Trace[1870582264]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:6ec86b9b-b044-495c-bc8f-953c412022ab,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 12:31:24.268) (total time: 1084ms):
+Trace[1870582264]: ---"About to write a response" 1083ms (12:31:25.352)
+Trace[1870582264]: [1.084622952s] [1.084622952s] END
+I0227 12:31:25.828913       1 trace.go:236] Trace[321834762]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:5084db6f-7739-42e6-8810-a55db73a9b73,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 12:31:24.573) (total time: 1255ms):
+Trace[321834762]: ---"About to write a response" 1250ms (12:31:25.824)
+Trace[321834762]: [1.255331105s] [1.255331105s] END
+I0227 12:31:25.909642       1 trace.go:236] Trace[825267099]: "Update" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:78f02c79-ea35-4be8-a33b-5e9436c8f17c,client:172.18.0.2,api-group:coordination.k8s.io,api-version:v1,name:fever-cluster-worker,subresource:,namespace:kube-node-lease,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/fever-cluster-worker,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 12:31:24.059) (total time: 1850ms):
+Trace[825267099]: ["GuaranteedUpdate etcd3" audit-id:78f02c79-ea35-4be8-a33b-5e9436c8f17c,key:/leases/kube-node-lease/fever-cluster-worker,type:*coordination.Lease,resource:leases.coordination.k8s.io 1845ms (12:31:24.064)
+Trace[825267099]:  ---"About to Encode" 1787ms (12:31:25.858)]
+Trace[825267099]: [1.850244369s] [1.850244369s] END
+E0227 12:40:05.817389       1 timeout.go:142] post-timeout activity - time-elapsed: 265.941µs, GET "/apis" result: <nil>
+E0227 12:54:00.018688       1 timeout.go:142] post-timeout activity - time-elapsed: 28.202µs, GET "/api" result: <nil>
+I0227 12:54:12.921820       1 trace.go:236] Trace[230941418]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:4b1e9e6b-51df-436b-b0d3-716533024efb,client:172.18.0.3,api-group:apps,api-version:v1,name:server-fever,subresource:status,namespace:default,protocol:HTTP/2.0,resource:deployments,scope:resource,url:/apis/apps/v1/namespaces/default/deployments/server-fever/status,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/system:serviceaccount:kube-system:deployment-controller,verb:PUT (27-Feb-2024 12:54:12.291) (total time: 590ms):
+Trace[230941418]: [590.715666ms] [590.715666ms] END
+I0227 12:55:41.300661       1 trace.go:236] Trace[469030120]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 12:55:40.729) (total time: 535ms):
+Trace[469030120]: ---"Transaction prepared" 458ms (12:55:41.237)
+Trace[469030120]: [535.193061ms] [535.193061ms] END
+E0227 12:57:14.050137       1 timeout.go:142] post-timeout activity - time-elapsed: 2.776µs, GET "/api" result: <nil>
+I0227 14:02:21.359967       1 controller.go:624] quota admission added evaluator for: namespaces
+I0227 14:02:21.545162       1 controller.go:624] quota admission added evaluator for: serviceaccounts
+I0227 14:02:21.715228       1 controller.go:624] quota admission added evaluator for: roles.rbac.authorization.k8s.io
+I0227 14:02:21.863394       1 controller.go:624] quota admission added evaluator for: rolebindings.rbac.authorization.k8s.io
+I0227 14:02:22.179946       1 alloc.go:330] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller" clusterIPs={"IPv4":"10.96.251.209"}
+I0227 14:02:22.445873       1 alloc.go:330] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller-admission" clusterIPs={"IPv4":"10.96.206.159"}
+I0227 14:02:22.579931       1 controller.go:624] quota admission added evaluator for: jobs.batch
+E0227 14:04:30.457732       1 timeout.go:142] post-timeout activity - time-elapsed: 3.151µs, GET "/api" result: <nil>
+E0227 14:26:51.557597       1 timeout.go:142] post-timeout activity - time-elapsed: 406.099µs, GET "/api" result: <nil>
+E0227 14:26:51.558481       1 wrap.go:54] timeout or abort while handling: method=GET URI="/api?timeout=32s" audit-ID="6ecc4f16-fde3-4dc1-975b-406aa8ea522c"
+E0227 14:26:57.944905       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 14:26:57.945770       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 14:26:57.946308       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 14:26:57.953221       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 14:26:57.954337       1 timeout.go:142] post-timeout activity - time-elapsed: 10.623449ms, GET "/api/v1/namespaces/default/services" result: <nil>
+E0227 14:27:14.111508       1 timeout.go:142] post-timeout activity - time-elapsed: 1.637659ms, GET "/apis" result: <nil>
+E0227 14:30:35.676592       1 timeout.go:142] post-timeout activity - time-elapsed: 3.667µs, GET "/api" result: <nil>
+E0227 14:30:35.983528       1 timeout.go:142] post-timeout activity - time-elapsed: 2.127865ms, GET "/api" result: <nil>
+E0227 14:35:07.625223       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 14:35:07.627831       1 wrap.go:54] timeout or abort while handling: method=GET URI="/apis/apps/v1/namespaces/default/deployments?limit=500" audit-ID="10c30eeb-a097-4328-ac7c-f40157f6b5db"
+E0227 14:35:07.633284       1 timeout.go:142] post-timeout activity - time-elapsed: 4.637µs, GET "/apis/apps/v1/namespaces/default/deployments" result: <nil>
+E0227 14:35:11.540469       1 timeout.go:142] post-timeout activity - time-elapsed: 11.716116ms, GET "/apis" result: <nil>
+I0227 14:35:53.516332       1 trace.go:236] Trace[615867432]: "Patch" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:7f9c39b6-9eda-4c87-83d5-45515528dea1,client:172.18.0.2,api-group:,api-version:v1,name:server-fever-645468cd87-9qpdv.17b7beed4203d27e,subresource:,namespace:default,protocol:HTTP/2.0,resource:events,scope:resource,url:/api/v1/namespaces/default/events/server-fever-645468cd87-9qpdv.17b7beed4203d27e,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PATCH (27-Feb-2024 14:35:52.939) (total time: 542ms):
+Trace[615867432]: ---"About to check admission control" 67ms (14:35:53.101)
+Trace[615867432]: ---"Object stored in database" 380ms (14:35:53.482)
+Trace[615867432]: [542.894764ms] [542.894764ms] END
+I0227 14:35:59.254727       1 trace.go:236] Trace[507166576]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:4815f298-5cf2-417d-bc03-959251b4ad9c,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 14:35:58.527) (total time: 712ms):
+Trace[507166576]: ---"About to write a response" 687ms (14:35:59.236)
+Trace[507166576]: [712.801546ms] [712.801546ms] END
+I0227 14:35:59.254787       1 trace.go:236] Trace[95078910]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:decce5fb-956f-4225-bdf1-956c7ef062c3,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 14:35:58.619) (total time: 622ms):
+Trace[95078910]: ---"About to write a response" 617ms (14:35:59.236)
+Trace[95078910]: [622.657019ms] [622.657019ms] END
+I0227 14:35:59.325503       1 trace.go:236] Trace[1880209004]: "Update" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:46bfe405-0a03-464c-89e9-8a223aa7d9fe,client:172.18.0.2,api-group:coordination.k8s.io,api-version:v1,name:fever-cluster-worker,subresource:,namespace:kube-node-lease,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/fever-cluster-worker,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 14:35:58.773) (total time: 551ms):
+Trace[1880209004]: ---"limitedReadBody succeeded" len:513 28ms (14:35:58.802)
+Trace[1880209004]: ---"About to convert to expected version" 17ms (14:35:58.819)
+Trace[1880209004]: [551.813914ms] [551.813914ms] END
+I0227 14:35:59.326255       1 trace.go:236] Trace[737413220]: "Update" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:cf4b0284-90dc-4ffa-b996-a86851582a01,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:fever-cluster-control-plane,subresource:,namespace:kube-node-lease,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/fever-cluster-control-plane,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 14:35:58.793) (total time: 532ms):
+Trace[737413220]: ---"limitedReadBody succeeded" len:535 17ms (14:35:58.811)
+Trace[737413220]: [532.744733ms] [532.744733ms] END
+I0227 14:37:24.707685       1 trace.go:236] Trace[1199306989]: "Create" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:85f11a87-7a31-412d-9f87-fb1aa7e69996,client:172.18.0.2,api-group:,api-version:v1,name:kindnet,subresource:token,namespace:kube-system,protocol:HTTP/2.0,resource:serviceaccounts,scope:resource,url:/api/v1/namespaces/kube-system/serviceaccounts/kindnet/token,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:POST (27-Feb-2024 14:37:24.101) (total time: 589ms):
+Trace[1199306989]: ---"Write to database call succeeded" len:145 554ms (14:37:24.703)
+Trace[1199306989]: [589.61992ms] [589.61992ms] END
+I0227 14:42:29.634144       1 trace.go:236] Trace[1755850535]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:298ea193-b94a-4758-bb33-63428350c995,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 14:42:28.815) (total time: 788ms):
+Trace[1755850535]: ---"About to store object in database" 16ms (14:42:28.838)
+Trace[1755850535]: ["GuaranteedUpdate etcd3" audit-id:298ea193-b94a-4758-bb33-63428350c995,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 658ms (14:42:28.946)
+Trace[1755850535]:  ---"About to Encode" 235ms (14:42:29.204)
+Trace[1755850535]:  ---"Txn call completed" 399ms (14:42:29.604)]
+Trace[1755850535]: [788.590012ms] [788.590012ms] END
+I0227 14:44:01.133152       1 trace.go:236] Trace[417901814]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:e2c4969f-36bd-4e3a-a9ca-9a8244916a14,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 14:44:00.533) (total time: 537ms):
+Trace[417901814]: ---"About to write a response" 536ms (14:44:01.070)
+Trace[417901814]: [537.025399ms] [537.025399ms] END
+I0227 14:44:01.137218       1 trace.go:236] Trace[1401691898]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:ddbf1647-0ce0-4b29-a852-40f0b5991d73,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 14:44:00.505) (total time: 591ms):
+Trace[1401691898]: ["GuaranteedUpdate etcd3" audit-id:ddbf1647-0ce0-4b29-a852-40f0b5991d73,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 591ms (14:44:00.505)
+Trace[1401691898]:  ---"Txn call completed" 590ms (14:44:01.096)]
+Trace[1401691898]: [591.311451ms] [591.311451ms] END
+E0227 14:44:14.000433       1 timeout.go:142] post-timeout activity - time-elapsed: 2.019864ms, GET "/api" result: <nil>
+I0227 14:44:14.861594       1 trace.go:236] Trace[1937075920]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:e5d075b4-1a95-437a-b7f9-6745861ecbfe,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 14:44:14.071) (total time: 775ms):
+Trace[1937075920]: ["GuaranteedUpdate etcd3" audit-id:e5d075b4-1a95-437a-b7f9-6745861ecbfe,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 759ms (14:44:14.086)
+Trace[1937075920]:  ---"Txn call completed" 755ms (14:44:14.844)]
+Trace[1937075920]: [775.595625ms] [775.595625ms] END
+I0227 14:44:14.944040       1 trace.go:236] Trace[1521355356]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:22e5a51b-5a63-4b52-a715-57c6391bfd40,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 14:44:14.089) (total time: 794ms):
+Trace[1521355356]: ["GuaranteedUpdate etcd3" audit-id:22e5a51b-5a63-4b52-a715-57c6391bfd40,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 854ms (14:44:14.089)
+Trace[1521355356]:  ---"Txn call completed" 791ms (14:44:14.883)]
+Trace[1521355356]: [794.917862ms] [794.917862ms] END
+E0227 14:47:43.728815       1 timeout.go:142] post-timeout activity - time-elapsed: 554.001µs, GET "/apis" result: <nil>
+E0227 14:47:46.013803       1 timeout.go:142] post-timeout activity - time-elapsed: 449.355µs, GET "/api" result: <nil>
+I0227 15:01:14.457237       1 controller.go:624] quota admission added evaluator for: ingresses.networking.k8s.io
+I0227 16:15:43.579840       1 trace.go:236] Trace[1606722455]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:56914f9c-2e14-4bd7-a898-72bb757f83e9,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 16:15:43.058) (total time: 513ms):
+Trace[1606722455]: ["GuaranteedUpdate etcd3" audit-id:56914f9c-2e14-4bd7-a898-72bb757f83e9,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 513ms (16:15:43.058)
+Trace[1606722455]:  ---"Txn call completed" 511ms (16:15:43.571)]
+Trace[1606722455]: [513.461514ms] [513.461514ms] END
+I0227 16:15:43.669052       1 trace.go:236] Trace[807491393]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 16:15:42.806) (total time: 856ms):
+Trace[807491393]: ---"initial value restored" 763ms (16:15:43.569)
+Trace[807491393]: ---"Transaction prepared" 68ms (16:15:43.643)
+Trace[807491393]: [856.387147ms] [856.387147ms] END
+E0227 16:16:18.829516       1 timeout.go:142] post-timeout activity - time-elapsed: 2.806747ms, GET "/api" result: <nil>
+E0227 16:18:56.657440       1 timeout.go:142] post-timeout activity - time-elapsed: 9.563324ms, GET "/api" result: <nil>
+E0227 16:19:42.769173       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 16:19:42.770726       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 16:19:42.772171       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 16:19:42.772453       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 16:19:42.775294       1 timeout.go:142] post-timeout activity - time-elapsed: 10.650393ms, GET "/api/v1/namespaces/default/pods" result: <nil>
+E0227 16:35:01.335740       1 timeout.go:142] post-timeout activity - time-elapsed: 5.498014ms, GET "/api" result: <nil>
+I0227 16:57:56.202119       1 trace.go:236] Trace[402689932]: "Patch" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:d0c7c8fa-64c5-4a53-b041-fb6782439c0c,client:172.18.0.2,api-group:,api-version:v1,name:ingress-nginx-controller-5d9ff675b-8zfbc,subresource:status,namespace:ingress-nginx,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/ingress-nginx/pods/ingress-nginx-controller-5d9ff675b-8zfbc/status,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PATCH (27-Feb-2024 16:57:55.606) (total time: 579ms):
+Trace[402689932]: ["GuaranteedUpdate etcd3" audit-id:d0c7c8fa-64c5-4a53-b041-fb6782439c0c,key:/pods/ingress-nginx/ingress-nginx-controller-5d9ff675b-8zfbc,type:*core.Pod,resource:pods 543ms (16:57:55.642)
+Trace[402689932]:  ---"About to Encode" 113ms (16:57:55.774)
+Trace[402689932]:  ---"Txn call completed" 409ms (16:57:56.183)]
+Trace[402689932]: ---"About to check admission control" 93ms (16:57:55.757)
+Trace[402689932]: ---"Object stored in database" 427ms (16:57:56.184)
+Trace[402689932]: [579.779853ms] [579.779853ms] END
+I0227 17:21:18.955783       1 trace.go:236] Trace[1876999431]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:09ef0a8d-983b-4423-a02d-dc420db67d53,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 17:21:18.376) (total time: 521ms):
+Trace[1876999431]: ["GuaranteedUpdate etcd3" audit-id:09ef0a8d-983b-4423-a02d-dc420db67d53,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 514ms (17:21:18.382)
+Trace[1876999431]:  ---"Txn call completed" 469ms (17:21:18.897)]
+Trace[1876999431]: [521.036404ms] [521.036404ms] END
+E0227 17:30:28.824128       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:30:28.826702       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:30:28.827098       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:30:28.828178       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:30:28.833149       1 timeout.go:142] post-timeout activity - time-elapsed: 4.138µs, GET "/api/v1/namespaces" result: <nil>
+E0227 17:30:33.690410       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:30:33.692333       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:30:33.692361       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:30:33.697950       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:30:33.701431       1 timeout.go:142] post-timeout activity - time-elapsed: 24.94076ms, GET "/api/v1/namespaces" result: <nil>
+E0227 17:30:53.622198       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:30:53.624861       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:30:53.625761       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:30:53.627563       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:30:53.631890       1 timeout.go:142] post-timeout activity - time-elapsed: 20.212113ms, GET "/api/v1/namespaces" result: <nil>
+E0227 17:30:59.652816       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:30:59.658338       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:30:59.658378       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:30:59.660748       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:30:59.664330       1 timeout.go:142] post-timeout activity - time-elapsed: 74.567024ms, GET "/api/v1/namespaces" result: <nil>
+E0227 17:30:59.723892       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:30:59.723941       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:30:59.725305       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:30:59.725377       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:30:59.728017       1 timeout.go:142] post-timeout activity - time-elapsed: 7.116359ms, GET "/api/v1/namespaces" result: <nil>
+E0227 17:31:09.681741       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:31:09.685336       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:31:09.685364       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:31:09.695749       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:31:09.718411       1 timeout.go:142] post-timeout activity - time-elapsed: 30.49444ms, GET "/api/v1/namespaces" result: <nil>
+I0227 17:32:38.878179       1 trace.go:236] Trace[22581845]: "Get" accept:application/json, */*,audit-id:cbaebfa4-3074-456e-9347-daa6aeac0597,client:172.18.0.1,api-group:,api-version:v1,name:ingress-nginx-controller-568fb54f96-s2sz5,subresource:log,namespace:ingress-nginx,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/ingress-nginx/pods/ingress-nginx-controller-568fb54f96-s2sz5/log,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:CONNECT (27-Feb-2024 17:31:26.718) (total time: 72127ms):
+Trace[22581845]: ---"Writing http response done" 72113ms (17:32:38.848)
+Trace[22581845]: [1m12.127904736s] [1m12.127904736s] END
+I0227 17:43:14.275376       1 trace.go:236] Trace[2138455659]: "Delete" accept:application/json,audit-id:8bccdd0f-c347-48f0-ae3b-a2b8afaecc7b,client:172.18.0.1,api-group:,api-version:v1,name:ingress-nginx-controller,subresource:,namespace:ingress-nginx,protocol:HTTP/2.0,resource:services,scope:resource,url:/api/v1/namespaces/ingress-nginx/services/ingress-nginx-controller,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:DELETE (27-Feb-2024 17:43:13.620) (total time: 631ms):
+Trace[2138455659]: ---"Object deleted from database" 630ms (17:43:14.252)
+Trace[2138455659]: [631.782735ms] [631.782735ms] END
+E0227 17:43:25.566683       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, serviceaccounts \"ingress-nginx\" not found]"
+E0227 17:43:27.172299       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, serviceaccounts \"ingress-nginx\" not found]"
+I0227 17:53:13.826759       1 alloc.go:330] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller" clusterIPs={"IPv4":"10.96.53.12"}
+I0227 17:53:14.081680       1 alloc.go:330] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller-admission" clusterIPs={"IPv4":"10.96.231.17"}
+I0227 17:55:33.002290       1 alloc.go:330] "allocated clusterIPs" service="default/foo-service" clusterIPs={"IPv4":"10.96.135.13"}
+I0227 17:55:33.263419       1 alloc.go:330] "allocated clusterIPs" service="default/bar-service" clusterIPs={"IPv4":"10.96.231.232"}
+W0227 17:55:33.311751       1 dispatcher.go:217] Failed calling webhook, failing closed validate.nginx.ingress.kubernetes.io: failed calling webhook "validate.nginx.ingress.kubernetes.io": failed to call webhook: Post "https://ingress-nginx-controller-admission.ingress-nginx.svc:443/networking/v1/ingresses?timeout=10s": dial tcp 10.96.231.17:443: connect: connection refused
+E0227 17:55:48.342475       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:55:48.347186       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:55:48.351493       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:55:48.355081       1 timeout.go:142] post-timeout activity - time-elapsed: 113.668805ms, GET "/api/v1/namespaces/default/pods" result: <nil>
+E0227 17:56:50.881598       1 timeout.go:142] post-timeout activity - time-elapsed: 914.095µs, GET "/api" result: <nil>
+E0227 17:56:52.100784       1 writers.go:122] apiserver was unable to write a JSON response: client disconnected
+E0227 17:56:52.101207       1 wrap.go:54] timeout or abort while handling: method=GET URI="/api/v1/namespaces/default/pods?limit=500" audit-ID="b8138fee-2321-484d-a94e-bcffaff12551"
+E0227 17:56:52.101255       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"client disconnected"}: client disconnected
+E0227 17:56:52.103067       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:56:52.103482       1 timeout.go:142] post-timeout activity - time-elapsed: 2.231755ms, GET "/api/v1/namespaces/default/pods" result: <nil>
+E0227 17:56:57.554763       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 17:56:57.559404       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 17:56:57.559447       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 17:56:57.563217       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 17:56:57.565745       1 timeout.go:142] post-timeout activity - time-elapsed: 19.872419ms, GET "/api/v1/namespaces" result: <nil>
+I0227 17:56:59.475457       1 trace.go:236] Trace[585662891]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:36e1dac1-aeae-424d-9bd4-94999aedf99b,client:::1,api-group:coordination.k8s.io,api-version:v1,name:apiserver-sotkwoiq7t35jcwpdcga6s3pdi,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-sotkwoiq7t35jcwpdcga6s3pdi,user-agent:kube-apiserver/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PUT (27-Feb-2024 17:56:58.768) (total time: 699ms):
+Trace[585662891]: ["GuaranteedUpdate etcd3" audit-id:36e1dac1-aeae-424d-9bd4-94999aedf99b,key:/leases/kube-system/apiserver-sotkwoiq7t35jcwpdcga6s3pdi,type:*coordination.Lease,resource:leases.coordination.k8s.io 699ms (17:56:58.768)
+Trace[585662891]:  ---"Txn call completed" 695ms (17:56:59.467)]
+Trace[585662891]: [699.234831ms] [699.234831ms] END
+I0227 17:56:59.476003       1 trace.go:236] Trace[561790271]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:fc512c29-2121-43fa-beac-df32aad4ccf4,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 17:56:58.793) (total time: 682ms):
+Trace[561790271]: ["GuaranteedUpdate etcd3" audit-id:fc512c29-2121-43fa-beac-df32aad4ccf4,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 682ms (17:56:58.793)
+Trace[561790271]:  ---"Txn call completed" 681ms (17:56:59.475)]
+Trace[561790271]: [682.891855ms] [682.891855ms] END
+I0227 17:56:59.476203       1 trace.go:236] Trace[1291684824]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:d049d599-66e5-48aa-827e-f8d2355d39db,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 17:56:58.783) (total time: 693ms):
+Trace[1291684824]: ["GuaranteedUpdate etcd3" audit-id:d049d599-66e5-48aa-827e-f8d2355d39db,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 692ms (17:56:58.783)
+Trace[1291684824]:  ---"Txn call completed" 690ms (17:56:59.476)]
+Trace[1291684824]: [693.059477ms] [693.059477ms] END
+E0227 17:58:05.432451       1 timeout.go:142] post-timeout activity - time-elapsed: 11.236471ms, GET "/api" result: <nil>
+I0227 17:58:29.476140       1 trace.go:236] Trace[1112698917]: "Delete" accept:application/json,audit-id:38233aa0-215f-4c21-87ec-966a57d780ba,client:172.18.0.1,api-group:,api-version:v1,name:foo-service,subresource:,namespace:default,protocol:HTTP/2.0,resource:services,scope:resource,url:/api/v1/namespaces/default/services/foo-service,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:DELETE (27-Feb-2024 17:58:28.749) (total time: 655ms):
+Trace[1112698917]: ---"Object deleted from database" 641ms (17:58:29.391)
+Trace[1112698917]: [655.428635ms] [655.428635ms] END
+E0227 18:04:32.732183       1 repair.go:325] the cluster IP 10.96.53.12 may have leaked: flagging for later clean up
+E0227 18:04:32.732548       1 repair.go:198] the node port 31015 may have leaked: flagging for later clean up
+E0227 18:04:32.733719       1 repair.go:198] the node port 32292 may have leaked: flagging for later clean up
+I0227 18:04:55.263692       1 alloc.go:330] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller" clusterIPs={"IPv4":"10.96.248.89"}
+I0227 18:04:55.473625       1 alloc.go:330] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller-admission" clusterIPs={"IPv4":"10.96.69.51"}
+E0227 18:05:56.496872       1 timeout.go:142] post-timeout activity - time-elapsed: 1.270426ms, GET "/api" result: <nil>
+E0227 18:05:57.553600       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:05:57.555015       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:05:57.555105       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:05:57.556605       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:05:57.556752       1 timeout.go:142] post-timeout activity - time-elapsed: 16.468789ms, GET "/api/v1/namespaces/default/pods" result: <nil>
+E0227 18:06:01.506315       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:06:01.518768       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:06:01.518805       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:06:01.521165       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:06:01.522105       1 timeout.go:142] post-timeout activity - time-elapsed: 25.673073ms, GET "/api/v1/namespaces" result: <nil>
+I0227 18:06:52.833710       1 alloc.go:330] "allocated clusterIPs" service="default/foo-service" clusterIPs={"IPv4":"10.96.136.198"}
+I0227 18:06:53.378510       1 alloc.go:330] "allocated clusterIPs" service="default/bar-service" clusterIPs={"IPv4":"10.96.47.197"}
+I0227 18:06:54.221260       1 trace.go:236] Trace[184140716]: "Create" accept:application/json,audit-id:9f9b7d22-47e5-4f2a-9c22-c7bbb1afc315,client:172.18.0.1,api-group:networking.k8s.io,api-version:v1,name:,subresource:,namespace:default,protocol:HTTP/2.0,resource:ingresses,scope:resource,url:/apis/networking.k8s.io/v1/namespaces/default/ingresses,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:POST (27-Feb-2024 18:06:53.554) (total time: 657ms):
+Trace[184140716]: ---"Conversion done" 12ms (18:06:53.567)
+Trace[184140716]: ["Call validating webhook" configuration:ingress-nginx-admission,webhook:validate.nginx.ingress.kubernetes.io,resource:networking.k8s.io/v1, Resource=ingresses,subresource:,operation:CREATE,UID:99274ee9-d8d1-4448-aa59-2de0c04afe57 587ms (18:06:53.624)
+Trace[184140716]:  ---"Request completed" 573ms (18:06:54.197)]
+Trace[184140716]: [657.862076ms] [657.862076ms] END
+I0227 18:09:01.278608       1 trace.go:236] Trace[1499705477]: "Create" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:4e72739b-7e85-4e86-a361-3e38f9ed9997,client:172.18.0.2,api-group:,api-version:v1,name:,subresource:,namespace:default,protocol:HTTP/2.0,resource:events,scope:resource,url:/api/v1/namespaces/default/events,user-agent:kubelet/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:POST (27-Feb-2024 18:09:00.756) (total time: 501ms):
+Trace[1499705477]: ---"Writing http response done" 29ms (18:09:01.257)
+Trace[1499705477]: [501.157093ms] [501.157093ms] END
+I0227 18:17:02.988437       1 trace.go:236] Trace[835032853]: "Patch" accept:application/json,audit-id:77488c2f-ad73-4e00-afe6-119c1f9d1340,client:172.18.0.1,api-group:networking.k8s.io,api-version:v1,name:nginx-ingress,subresource:,namespace:default,protocol:HTTP/2.0,resource:ingresses,scope:resource,url:/apis/networking.k8s.io/v1/namespaces/default/ingresses/nginx-ingress,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:PATCH (27-Feb-2024 18:17:02.423) (total time: 552ms):
+Trace[835032853]: ["GuaranteedUpdate etcd3" audit-id:77488c2f-ad73-4e00-afe6-119c1f9d1340,key:/ingress/default/nginx-ingress,type:*networking.Ingress,resource:ingresses.networking.k8s.io 550ms (18:17:02.425)
+Trace[835032853]:  ---"About to Encode" 381ms (18:17:02.809)
+Trace[835032853]:  ---"Txn call completed" 164ms (18:17:02.975)]
+Trace[835032853]: ---"Object stored in database" 166ms (18:17:02.975)
+Trace[835032853]: [552.324878ms] [552.324878ms] END
+E0227 18:23:01.730586       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:23:01.732329       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:23:01.732348       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:23:01.734761       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:23:01.736068       1 timeout.go:142] post-timeout activity - time-elapsed: 16.577415ms, GET "/api/v1/namespaces/default/pods" result: <nil>
+E0227 18:23:01.959017       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:23:01.962100       1 timeout.go:142] post-timeout activity - time-elapsed: 12.821µs, GET "/api/v1/namespaces/default/pods" result: <nil>
+E0227 18:23:01.962290       1 wrap.go:54] timeout or abort while handling: method=GET URI="/api/v1/namespaces/default/pods?limit=500" audit-ID="eaf5afaa-5c10-4931-a75b-0b70c23c6a6e"
+I0227 18:23:17.704413       1 trace.go:236] Trace[1936852252]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:57a6c51c-3fce-4cf1-bdb7-7e8b3f6a75f6,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:23:17.159) (total time: 535ms):
+Trace[1936852252]: ---"limitedReadBody succeeded" len:436 39ms (18:23:17.199)
+Trace[1936852252]: [535.721953ms] [535.721953ms] END
+E0227 18:23:58.644709       1 timeout.go:142] post-timeout activity - time-elapsed: 1.009232ms, GET "/apis" result: <nil>
+E0227 18:24:16.143134       1 timeout.go:142] post-timeout activity - time-elapsed: 5.994µs, GET "/api" result: <nil>
+E0227 18:24:16.307702       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:24:16.316312       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:24:16.316350       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:24:16.322428       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:24:16.322588       1 timeout.go:142] post-timeout activity - time-elapsed: 65.399013ms, GET "/api/v1/namespaces" result: <nil>
+E0227 18:24:25.245003       1 timeout.go:142] post-timeout activity - time-elapsed: 163.979µs, GET "/apis" result: <nil>
+E0227 18:24:26.234581       1 timeout.go:142] post-timeout activity - time-elapsed: 4.764448ms, GET "/api" result: <nil>
+E0227 18:24:26.590987       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:24:26.591331       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:24:26.596378       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:24:26.596446       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:24:26.600438       1 timeout.go:142] post-timeout activity - time-elapsed: 15.927937ms, GET "/api/v1/namespaces" result: <nil>
+E0227 18:24:28.179230       1 timeout.go:142] post-timeout activity - time-elapsed: 9.206761ms, GET "/apis" result: <nil>
+E0227 18:24:28.431359       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:24:28.431490       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:24:28.433607       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:24:28.433654       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:24:28.434879       1 timeout.go:142] post-timeout activity - time-elapsed: 12.250014ms, GET "/api/v1/namespaces" result: <nil>
+E0227 18:25:01.417469       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}: context canceled
+E0227 18:25:01.419654       1 writers.go:122] apiserver was unable to write a JSON response: http: Handler timeout
+E0227 18:25:01.419892       1 status.go:71] apiserver received an error that is not an metav1.Status: &errors.errorString{s:"http: Handler timeout"}: http: Handler timeout
+E0227 18:25:01.422182       1 writers.go:135] apiserver was unable to write a fallback JSON response: http: Handler timeout
+E0227 18:25:01.446293       1 timeout.go:142] post-timeout activity - time-elapsed: 30.967µs, GET "/api/v1/namespaces" result: <nil>
+I0227 18:31:21.347086       1 trace.go:236] Trace[1654065858]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:dcf3a0fc-80a9-4255-8633-219c30519f23,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:31:20.607) (total time: 698ms):
+Trace[1654065858]: ["GuaranteedUpdate etcd3" audit-id:dcf3a0fc-80a9-4255-8633-219c30519f23,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 695ms (18:31:20.611)
+Trace[1654065858]:  ---"Txn call completed" 692ms (18:31:21.306)]
+Trace[1654065858]: [698.758351ms] [698.758351ms] END
+I0227 18:31:21.347370       1 trace.go:236] Trace[1986418896]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:e3c59578-cd4e-4c61-ad64-8cf9397ecf65,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:31:20.493) (total time: 820ms):
+Trace[1986418896]: ["GuaranteedUpdate etcd3" audit-id:e3c59578-cd4e-4c61-ad64-8cf9397ecf65,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 820ms (18:31:20.494)
+Trace[1986418896]:  ---"About to Encode" 119ms (18:31:20.613)
+Trace[1986418896]:  ---"Txn call completed" 694ms (18:31:21.308)]
+Trace[1986418896]: [820.644162ms] [820.644162ms] END
+I0227 18:31:25.107725       1 trace.go:236] Trace[1488331348]: "Get" accept:application/vnd.kubernetes.protobuf, */*,audit-id:80817bfc-9441-429f-8974-55c1a74dc9ee,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:GET (27-Feb-2024 18:31:24.473) (total time: 624ms):
+Trace[1488331348]: ---"About to write a response" 619ms (18:31:25.094)
+Trace[1488331348]: [624.748288ms] [624.748288ms] END
+I0227 18:31:25.110639       1 trace.go:236] Trace[444075787]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/172.18.0.3,type:*v1.Endpoints,resource:apiServerIPInfo (27-Feb-2024 18:31:24.030) (total time: 1063ms):
+Trace[444075787]: ---"initial value restored" 426ms (18:31:24.457)
+Trace[444075787]: ---"Transaction prepared" 551ms (18:31:25.012)
+Trace[444075787]: ---"Txn call completed" 82ms (18:31:25.094)
+Trace[444075787]: [1.063884939s] [1.063884939s] END
+I0227 18:31:25.132510       1 trace.go:236] Trace[926613448]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:e8e1b258-afdd-41c3-b11d-fdfea8be3dea,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:31:24.502) (total time: 630ms):
+Trace[926613448]: ---"About to convert to expected version" 49ms (18:31:24.564)
+Trace[926613448]: ["GuaranteedUpdate etcd3" audit-id:e8e1b258-afdd-41c3-b11d-fdfea8be3dea,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 551ms (18:31:24.580)
+Trace[926613448]:  ---"About to Encode" 458ms (18:31:25.093)]
+Trace[926613448]: [630.457338ms] [630.457338ms] END
+E0227 18:31:56.337524       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has been invalidated]"
+E0227 18:31:57.062479       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has been invalidated]"
+E0227 18:31:57.077807       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has been invalidated]"
+E0227 18:32:56.407816       1 upgradeaware.go:425] Error proxying data from client to backend: write tcp 172.18.0.3:44508->172.18.0.2:10250: write: broken pipe
+E0227 18:33:38.100853       1 timeout.go:142] post-timeout activity - time-elapsed: 4.624µs, GET "/api" result: <nil>
+E0227 18:36:44.093751       1 timeout.go:142] post-timeout activity - time-elapsed: 49.369µs, GET "/api" result: <nil>
+E0227 18:36:44.094917       1 wrap.go:54] timeout or abort while handling: method=GET URI="/api?timeout=32s" audit-ID="74e6d1ca-9f0d-4be6-b9a9-8a7c9729873f"
+I0227 18:45:15.343889       1 trace.go:236] Trace[1164539315]: "Get" accept:application/json, */*,audit-id:ffa303b6-f7e6-4470-a0a8-04d95f67f002,client:172.18.0.1,api-group:,api-version:v1,name:server-fever-5768d78bd5-s97df,subresource:log,namespace:default,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/default/pods/server-fever-5768d78bd5-s97df/log,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:CONNECT (27-Feb-2024 17:28:47.759) (total time: 4587545ms):
+Trace[1164539315]: ---"Writing http response done" 4587541ms (18:45:15.336)
+Trace[1164539315]: [1h16m27.545584086s] [1h16m27.545584086s] END
+I0227 18:46:31.143528       1 trace.go:236] Trace[1862247343]: "Get" accept:application/json, */*,audit-id:03359282-0789-4783-8cb7-cf955160f488,client:172.18.0.1,api-group:,api-version:v1,name:kindnet-2t8cp,subresource:log,namespace:kube-system,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/kube-system/pods/kindnet-2t8cp/log,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:CONNECT (27-Feb-2024 18:46:30.572) (total time: 565ms):
+Trace[1862247343]: ---"Writing http response done" 561ms (18:46:31.137)
+Trace[1862247343]: [565.216344ms] [565.216344ms] END
+I0227 18:46:32.164915       1 trace.go:236] Trace[1500251800]: "Get" accept:application/json, */*,audit-id:8e317dd8-5b1c-4ecc-877d-afffbbde61ce,client:172.18.0.1,api-group:,api-version:v1,name:kindnet-chgx5,subresource:log,namespace:kube-system,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/kube-system/pods/kindnet-chgx5/log,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:CONNECT (27-Feb-2024 18:46:31.150) (total time: 1013ms):
+Trace[1500251800]: ---"Writing http response done" 996ms (18:46:32.162)
+Trace[1500251800]: [1.013415932s] [1.013415932s] END
+I0227 18:48:39.437375       1 trace.go:236] Trace[354747787]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:3a5b0f4a-eeca-4578-9d8a-c0bc99aa6a66,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:48:38.834) (total time: 524ms):
+Trace[354747787]: ["GuaranteedUpdate etcd3" audit-id:3a5b0f4a-eeca-4578-9d8a-c0bc99aa6a66,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 523ms (18:48:38.835)
+Trace[354747787]:  ---"Txn call completed" 520ms (18:48:39.357)]
+Trace[354747787]: [524.03943ms] [524.03943ms] END
+I0227 18:48:39.546893       1 trace.go:236] Trace[1623902062]: "List" accept:application/json, */*,audit-id:f5d9d406-5f9e-4c57-901c-996b7e120d21,client:172.18.0.2,api-group:,api-version:v1,name:,subresource:,namespace:,protocol:HTTP/2.0,resource:nodes,scope:cluster,url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,verb:LIST (27-Feb-2024 18:48:38.891) (total time: 655ms):
+Trace[1623902062]: ["List(recursive=true) etcd3" audit-id:f5d9d406-5f9e-4c57-901c-996b7e120d21,key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: 639ms (18:48:38.907)]
+Trace[1623902062]: ---"Writing http response done" count:2 111ms (18:48:39.546)
+Trace[1623902062]: [655.362692ms] [655.362692ms] END
+I0227 18:53:44.277976       1 trace.go:236] Trace[1630700334]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:2e7f8c16-2d65-4a2d-b8eb-f1f2cf90adc7,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-scheduler,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:53:43.654) (total time: 597ms):
+Trace[1630700334]: ["GuaranteedUpdate etcd3" audit-id:2e7f8c16-2d65-4a2d-b8eb-f1f2cf90adc7,key:/leases/kube-system/kube-scheduler,type:*coordination.Lease,resource:leases.coordination.k8s.io 597ms (18:53:43.656)
+Trace[1630700334]:  ---"Txn call completed" 584ms (18:53:44.248)]
+Trace[1630700334]: [597.04082ms] [597.04082ms] END
+I0227 18:53:44.278224       1 trace.go:236] Trace[635409863]: "Update" accept:application/vnd.kubernetes.protobuf, */*,audit-id:358a6cbc-ae07-411b-abe8-3b4f6287f005,client:172.18.0.3,api-group:coordination.k8s.io,api-version:v1,name:kube-controller-manager,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:leases,scope:resource,url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.29.2 (linux/amd64) kubernetes/4b8e819/leader-election,verb:PUT (27-Feb-2024 18:53:43.389) (total time: 861ms):
+Trace[635409863]: ["GuaranteedUpdate etcd3" audit-id:358a6cbc-ae07-411b-abe8-3b4f6287f005,key:/leases/kube-system/kube-controller-manager,type:*coordination.Lease,resource:leases.coordination.k8s.io 849ms (18:53:43.400)
+Trace[635409863]:  ---"About to Encode" 138ms (18:53:43.591)
+Trace[635409863]:  ---"Txn call completed" 646ms (18:53:44.237)]
+Trace[635409863]: [861.142497ms] [861.142497ms] END
+I0227 18:54:32.593845       1 trace.go:236] Trace[272976805]: "Get" accept:application/json, */*,audit-id:f22aa963-c079-454c-88fb-a362a80af816,client:172.18.0.1,api-group:,api-version:v1,name:etcd-fever-cluster-control-plane,subresource:log,namespace:kube-system,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/kube-system/pods/etcd-fever-cluster-control-plane/log,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:CONNECT (27-Feb-2024 18:54:31.647) (total time: 941ms):
+Trace[272976805]: ---"Writing http response done" 939ms (18:54:32.588)
+Trace[272976805]: [941.652011ms] [941.652011ms] END
+I0227 18:54:33.402662       1 trace.go:236] Trace[684626816]: "Get" accept:application/json, */*,audit-id:64f3951e-9f53-4192-880a-086b19a31c4a,client:172.18.0.1,api-group:,api-version:v1,name:kindnet-2t8cp,subresource:log,namespace:kube-system,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/kube-system/pods/kindnet-2t8cp/log,user-agent:kubectl/v1.29.2 (linux/amd64) kubernetes/4b8e819,verb:CONNECT (27-Feb-2024 18:54:32.599) (total time: 802ms):
+Trace[684626816]: ---"Writing http response done" 798ms (18:54:33.402)
+Trace[684626816]: [802.637147ms] [802.637147ms] END
+==== END logs for container kube-apiserver of pod kube-system/kube-apiserver-fever-cluster-control-plane ====
